@@ -1,0 +1,105 @@
+nav#menu input#hamburger {
+    display: none;
+}
+
+    /*  Header    */
+
+header {
+    font-family: Verdana, sans-serif ;
+    color: white ;
+    background-color: blue ;
+    padding: 1em 1em 1em 1em; /*top,righ,bottom,left*/
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+div#signup > a[href= "register.html"] {
+    padding-right: 1em;
+    border-width: 0px 1px 0px 0px;
+    border-style: solid;
+}
+
+div#signup > a:nth-child(2) {
+    padding-left: 1em;
+}
+
+
+    /*     MENU      */
+
+
+nav#menu a {
+    font-family: Verdana, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+nav#menu ul{
+    list-style-type: none;  
+    text-align: center;
+    padding-inline-start: 0px;
+}
+
+nav#menu ul > li{
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border-width: 5px 0px 0px 0px;
+    border-style: solid;
+}
+
+nav#menu ul > li:nth-child(1){
+    border-color: red;
+}
+
+nav#menu ul > li:nth-child(2){
+    border-color: green;
+}
+
+nav#menu ul > li:nth-child(3){
+    border-color: yellow;
+}
+
+nav#menu ul > li:nth-child(4){
+    border-color: orangered;
+}
+
+nav#menu ul > li:nth-child(5){
+    border-color: pink;
+}
+
+nav#menu ul > li:nth-child(6){
+    border-color: purple;
+}
+
+
+aside#related {
+    background-color: black;
+    padding: 1em 1em 1em 1em;
+    
+}
+
+aside a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 25px;
+   
+}
+aside p {
+    color: white;
+}
+
+
+section#news header {
+    padding: 0px 0px 0px 0px;   
+}
+
+section#news h1 {
+    position:absolute;
+    z-index:1;
+    text-shadow: 3px 3px 3px red;
+    padding-left: 3em;
+}

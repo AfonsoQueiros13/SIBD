@@ -1,0 +1,13 @@
+
+up201808903 Afonso Queirós            up201708981 Bruno Baptista
+
+MusicWebPlayer, do estilo "Spotify"
+
+ -WebSite ligado á musica.
+	.Permite autenticação do utilizador
+	.Menus com diferentes géneros de música
+	.Possibilidade de guardar álbuns/músicas aos Favoritos
+	.Partilhar músicas (opcional,se der tempo)
+	.Ouvir música
+	.Criar amizades, de modo a que o utilizador consiga ver o que, o amigo que está online, está a ouvir.
+
