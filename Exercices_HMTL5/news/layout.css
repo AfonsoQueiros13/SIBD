@@ -1,0 +1,55 @@
+/*   CSS  :             FLEX MODEL               */
+
+/*MENU*/
+nav#menu > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+nav#menu > ul > li {
+    flex-grow: 1;
+}
+
+nav#menu > ul > li:first-child { /*LOCAL li*/
+    flex-grow: 2;
+}
+
+/*GRID*/
+
+body {
+    display: grid;
+    width: 60em;
+    grid-template-columns: [content-start] 4fr [content-end-menu-start] 1fr [menu-end];
+    grid-template-rows: [header-start] auto [header-end-menu-start] auto [menu-end-news-start] 1fr [news-end-footer-start] [footer-end];
+
+    grid-template-areas: "header-area header-area" "menu aside" "news aside" "footer aside";
+}
+
+body > header {
+    grid-area: header-area;
+
+    display:grid;
+    grid-template-columns: [header-start]  4fr [header-end-signup-start] 1fr [signup-end];
+    grid-template-rows:  [header-start]  auto [header-end];
+    grid-template-areas: "h1 signup"  "h2 signup";
+}
+
+body > header > div#signup {
+    grid-area: signup;
+    justify-self: end;
+    align-self: end;
+}
+
+
+body > nav#menu { 
+    grid-area: menu;
+}
+
+body > aside#related {
+    grid-area: aside;
+}
+
+body> footer {
+    grid-area: footer;
+}

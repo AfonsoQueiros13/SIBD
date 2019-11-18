@@ -1,0 +1,72 @@
+/*CELLPHONE*/
+@media(max-width: 30em) {
+    nav#menu {
+        background-color: #2A2F33;
+        position: relative;
+    }
+
+    nav#menu ul {
+        flex-flow: column;
+    }
+
+    nav#menu > ul > li {
+        border-top-width: 0px;
+        border-left-width: 5px;
+        text-align: left;
+        background-color: #aaaaaa;
+    }
+
+    /**HAMBURGER menu imput **/
+
+    nav#menu >div#hamburger {
+        font-size: 2em;
+        opacity: 1;
+
+    }
+
+    nav#menu >input#hamburger {
+        font-size: 2em;
+        position: absolute;
+        opacity: 0;
+    }
+
+    nav#menu label[for= "hamburger"] {
+        padding: 2em 0 2em 0;
+        font-size: 2em;
+        color: white;
+
+    }
+
+    nav#menu > label[for="hamburger"]::before {
+        content: "\2630";
+    }
+
+    nav#menu > input#hamburger:checked ~ label[for="hamburger"]::before {
+        content: "\2715";
+    }
+}
+
+
+/*IPAD OR TABLET*/
+@media(min-width: 30em ) and (max-width: 60em) {
+    aside#related{
+        display: none;
+    }
+
+    body {
+        display: grid;
+        width: 100%;
+        grid-template-columns: [content-start] auto [content-end];
+        grid-template-rows: [header-start] auto [header-end-menu-start] auto [menu-end-news-start] 1fr
+        [news-end-footer-start] auto [footer-end];
+        grid-template-areas: "header" "menu" "news" "footer";
+    }
+}
+/*IPAD AND IPHONE*/
+@media(max-width: 60em) {
+    aside#related {
+        display: none;
+
+    }
+}
+/*DEFAULT IS DESKTOP BEHAVIOUR*/
