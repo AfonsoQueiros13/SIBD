@@ -5,6 +5,7 @@
         position: relative;
     }
 
+
     nav#menu ul {
         flex-flow: column;
     }
@@ -40,6 +41,20 @@
     nav#menu > label[for="hamburger"]::before {
         content: "\2630";
     }
+    /*DISAPPEAR MENU */
+
+    nav#menu  > input#hamburger ~ ul > li {
+        height: 0;
+        padding : 0;
+        transition: all 1s ease;
+    }
+
+    nav#menu > input#hamburger:checked ~ ul > li {
+        height:1em;
+        padding : 1em 0 1em 0;
+
+    }
+
 
     nav#menu > input#hamburger:checked ~ label[for="hamburger"]::before {
         content: "\2715";

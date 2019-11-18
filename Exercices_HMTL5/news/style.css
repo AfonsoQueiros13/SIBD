@@ -129,6 +129,11 @@ section#news > article {
 	margin-top: 1em;
 }
 
+section#news > article:first-child {
+	
+	margin-top: 0;
+}
+
 section#news > article > img {
 	width: 100%;
 }
