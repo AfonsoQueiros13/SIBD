@@ -1,7 +1,6 @@
 ---------------SIBD 19/20 Webify Music Player Afonso Queirós Bruno Baptista--------------
-
 --user table--
-CREATE TABLE user (
+CREATE TABLE normal_user (
   id integer PRIMARY KEY,
   email varchar,
   password varchar
@@ -9,7 +8,7 @@ CREATE TABLE user (
 
 --profile table--
 CREATE TABLE profile (
-  id_user integer REFERENCES user,
+  id_user integer REFERENCES normal_user,
   name varchar,
   facebook_link varchar,
   status boolean
@@ -33,48 +32,40 @@ CREATE TABLE playlist (
 );
 
 --genre table --
-CREATE TABLE genre (
-  id integer PRIMARY KEY,
-  name varchar
-);
+CREATE TABLE genre (id integer PRIMARY KEY, name varchar);
 
 --liked_musics table--
 CREATE TABLE liked_musics (
-   id_user FOREIGN KEY references user,
-  id_music FOREIGN KEY references music
+  id_user INTEGER FOREIGN KEY references normal_user,
+  id_music INTEGER FOREIGN KEY references music
 );
-
 
 --playlist table--
 CREATE TABLE playlist_musics (
-   id_music integer FOREIGN KEY  REFERENCES music,
- id_playlist integer   FOREIGN KEY REFERENCES playlist
+  id_music integer FOREIGN KEY REFERENCES music,
+  id_playlist integer FOREIGN KEY REFERENCES playlist
 );
 
 --friends table--
-CREATE TABLE friends (
-  id_user integer FOREIGN KEY references user
-);
+CREATE TABLE friends (id_user integer FOREIGN KEY references normal_user);
 
 --trends table--
-CREATE TABLE trends (
-  id_music FOREIGN KEY references music
-);
+CREATE TABLE trends (id_music INTEGER FOREIGN KEY references music);
 
 --liked_playlists table--
 CREATE TABLE liked_playlists (
-   id_user FOREIGN KEY references user,
-   id_playlist integer FOREIGN KEY REFERENCES playlist
+  id_user  INTEGER FOREIGN KEY references normal_user,
+  id_playlist integer FOREIGN KEY REFERENCES playlist
 );
 
 --new_releases_by_genre table --
 CREATE TABLE new_releases_by_genre (
-   id_music integer FOREIGN KEY REFERENCES music,
+  id_music integer FOREIGN KEY REFERENCES music,
   id_genre integer FOREIGN KEY REFERENCES genre
 );
 
 --playlists_trends_by_genre table--
 CREATE TABLE playlists_trends_by_genre (
-  id_playlist FOREIGN KEY references playlist,
-  id_genre FOREIGN KEY references genre
+  id_playlist INTEGER FOREIGN KEY references playlist,
+  id_genre INTEGER FOREIGN KEY references genre
 );
