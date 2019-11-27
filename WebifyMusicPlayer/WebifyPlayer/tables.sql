@@ -9,15 +9,15 @@ CREATE TABLE normal_user (
 --profile table--
 CREATE TABLE profile (
   id_user integer REFERENCES normal_user,
-  name varchar,
+  name_profile varchar,
   facebook_link varchar,
-  status boolean
+  status integer
 );
 
 --music table--
 CREATE TABLE music (
   id integer PRIMARY KEY,
-  name varchar,
+  name_music varchar,
   autor varchar,
   album varchar,
   duration integer
@@ -71,3 +71,9 @@ CREATE TABLE playlists_trends_by_genre (
 );
 
 insert into normal_user values (1, 'abcd@gmail.com', '1324');
+insert into normal_user values (2, 'odiad@gmail.com', 'asdf');
+insert into normal_user values (3, 'aasdfd@gmail.com', '1gh4');
+insert into normal_user values (4, 'ioijcd@gmail.com', '13sdfgsdfg4');
+
+insert into music values (100,'ye','kanye','aosd', 120);
+insert into music values (101,'earfquake','tyler','igor', 120);
