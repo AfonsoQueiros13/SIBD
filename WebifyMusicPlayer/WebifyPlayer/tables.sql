@@ -3,6 +3,7 @@
 CREATE TABLE normal_user (
   id integer PRIMARY KEY,
   email varchar,
+  nick_name varchar,
   passwd varchar
 );
 

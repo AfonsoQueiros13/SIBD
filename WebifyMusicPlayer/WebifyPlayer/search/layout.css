@@ -1,0 +1,52 @@
+body{
+  display:grid;
+  grid-template-columns: [sidebar-start] 2fr [sidebar-end-page-start] 8fr [page-end];
+  grid-template-rows: [topbar-start] auto [topbar-end-search-start] auto [search-end-content-start] auto [content-end];
+  grid-template-areas: "topbar topbar"
+                       "search search"
+                       "side contentpage";
+}
+
+body header{
+  grid-area:topbar;
+  display:grid;
+  grid-template-columns: [logo-start] 1fr [logo-end-name-start] 1fr [name-end-signup-start] 10fr [signup-end];
+  grid-template-areas: "logo title signup"
+}
+
+body header img{
+  align-self: center;
+}
+
+body header h1{
+  justify-self:start;
+}
+
+body form{
+  grid-area:search;
+  display:flex;
+  flex-direction: row;
+}
+
+body form input[type=text]{
+  flex-grow: 10;
+}
+
+body form input[type=submit]{
+  flex-grow: 1;
+}
+
+body div#initialtext{
+  grid-area: contentpage;
+  align-self: center;
+}
+
+body div#sidebar {
+  grid-area:side;
+  display:flex;
+  flex-direction: column;
+}
+
+body div#sidebar div{
+  flex-grow: 1;
+}
