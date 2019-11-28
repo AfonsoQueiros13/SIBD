@@ -11,7 +11,6 @@ body header{
 body header img{
   margin-left: 1em;
   margin-right: 1em;
-  border-radius: 50%;
   max-width: 75px;
 }
 
@@ -32,18 +31,6 @@ body header div#signup a:nth-child(2){ /*  Login     */
   background-color: #034f84;
   border-radius: 25px;
 }
-
-body h2{
-  color:white;
-  text-align: center;
-  font-size: 200%;
-}
-
-body h3{
-  color:#adb3b3;
-  text-align: center;
-}
-
 
 body form input[type=text]{
   border-style: hidden;
@@ -76,5 +63,4 @@ body div#sidebar div{
 body div#sidebar div a{
   color:white;
   text-decoration: none;
-
 }

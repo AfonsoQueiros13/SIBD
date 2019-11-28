@@ -1,0 +1,44 @@
+/* body header div#topbar div#signup a:first-child:hover{
+    color:black;
+    background-color: #adb3b3;
+}
+
+body header div#topbar div#signup a:last-child:hover{
+    background-color: blue;
+} */
+
+
+
+
+
+
+
+
+
+/* MENU ICON*/
+
+body div#content>div#iconmenu>ul li a:hover{
+  color:white;
+}
+
+body div#topbar div#icon{
+  font-size: 4em
+
+}
+
+body div#topbar div#icon input#hamb{
+  font-size: 4em;
+  position:absolute;
+  opacity:0;
+
+}
+
+body div#topbar div#icon > label[for="hamb"]::before{   /*uncheck state*/
+  content: "\2630";
+  justify-self:center;
+}
+
+body div#topbar div#icon input#hamb:checked ~label[for="hamb"]::before{ /*check state*/
+  content: "\2715";
+  justify-self:center;
+}

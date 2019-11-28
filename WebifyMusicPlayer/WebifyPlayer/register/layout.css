@@ -1,16 +1,15 @@
 body{
-  display: grid;
+  display:grid;
   grid-template-columns: [sidebar-start] 2fr [sidebar-end-page-start] 8fr [page-end];
-  grid-template-rows: [topbar-start] auto [topbar-end-content-start]  auto [content-end];
+  grid-template-rows: [topbar-start] auto [topbar-end-content-start] auto [content-end];
   grid-template-areas: "topbar topbar"
-                       "sidebar content"
+                       "side contentpage";
 }
 
-body  header{
-  grid-area: topbar;
+body header{
+  grid-area:topbar;
   display:grid;
-  grid-template-columns: [logo-start] 1fr [logo-end-title-start] 1fr [title-end-signup-start]  10fr [signup-end];
-  grid-template-rows: [page-start] auto [page-end];
+  grid-template-columns: [logo-start] 1fr [logo-end-name-start] 1fr [name-end-signup-start] 10fr [signup-end];
   grid-template-areas: "logo title signup"
 }
 
@@ -31,7 +30,7 @@ body header div#signup{
 }
 
 body div#sidebar{
-  grid-area:sidebar;
+  grid-area:side;
   display:flex;
   flex-direction: column;
   background-color: #282828;
