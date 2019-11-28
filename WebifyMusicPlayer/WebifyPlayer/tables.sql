@@ -3,7 +3,7 @@
 CREATE TABLE normal_user (
   id integer PRIMARY KEY,
   email varchar,
-  password varchar
+  passwd varchar
 );
 
 --profile table--
@@ -11,7 +11,7 @@ CREATE TABLE profile (
   id_user integer REFERENCES normal_user,
   name_profile varchar,
   facebook_link varchar,
-  status integer
+  status_profile integer
 );
 
 --music table--
@@ -77,3 +77,6 @@ insert into normal_user values (4, 'ioijcd@gmail.com', '13sdfgsdfg4');
 
 insert into music values (100,'ye','kanye','aosd', 120);
 insert into music values (101,'earfquake','tyler','igor', 120);
+
+insert into profile values(1, 'Bruno', 'link', 1);
+insert into profile values(2, 'bbbb', 'links', 2);
