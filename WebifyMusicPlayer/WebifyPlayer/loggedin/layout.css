@@ -1,9 +1,9 @@
 body{
   display: grid;
-  grid-template-columns: [page-start] auto [page-end];
+  grid-template-columns: [sidebar-start] auto [sidebar-end-page-start] auto [page-end];
   grid-template-rows: [topbar-start] auto [topbar-end-content-start] auto [content-end];
-  grid-template-areas: "topbar"
-                       "contentpage";
+  grid-template-areas: "topbar topbar"
+                       "side contentpage";
 }
 
 
