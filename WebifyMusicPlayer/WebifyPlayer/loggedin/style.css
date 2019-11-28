@@ -8,23 +8,20 @@ body header{
   font-family: "Georgia", serif;
 }
 
-body header>div#topbar{
-  padding: 2em 2em 2em 2em;
-}
 
-body header>div#topbar img{
+body header img{
   margin-left: 4em;
   margin-right: 1em;
   border-radius: 50%;
   max-width: 75px;
 }
 
-body header>div#topbar>div#signup {
+body header div#signup {
   text-decoration: none;
   color:white;
 }
 
-body header>div#topbar>div#signup{ /*  Login     */
+body header div#signup{ /*  Login     */
   padding: 1em 1.5em 1em 1.5em;
   /* margin-right: 2em; */
   background-color: #034f84;
@@ -36,45 +33,58 @@ body header>div#topbar>div#signup{ /*  Login     */
 
 /*  CONTENT  */
 
-body div#content>div#iconmenu{
+body div#iconmenu{
   background-color: #282828;
 
 }
 
-body div#content>div#iconmenu>ul{
+body div#iconmenu ul{
   list-style-type: none;
 
 }
 
-body div#content>div#iconmenu>ul li a{
+body div#iconmenu>ul li a{
   text-decoration: none;
   color:grey;
   /* margin-top: 2em; */
 }
 
-body div#content>div#iconmenu ul>li:nth-child(1)>a {
+body div#iconmenu ul>li:nth-child(1)>a {
   color:white;
   border-style: hidden hidden hidden solid;
   border-color: #034f84;
 }
 
 
-body>div#content>div#rest{
+body div#rest{
   margin: 2em 2em 2em 2em;
 }
 
-body>div#content>div#rest>article h2{ /* TRENDING,... */
+body div#rest article h2{ /* TRENDING,... */
   color:white;
 }
 
-body>div#content>div#rest>article>ul{
+body div#rest article ul{
   list-style-type: none;
 }
 
-body>div#content>div#rest>article>ul li{  /*MUSICS/ARTISTS*/
+body div#rest>article>ul li{  /*MUSICS/ARTISTS*/
   color: #adb3b3;
+  background-color: #262626;
+  border-radius: 25px;
+  margin: 2em 2em 2em 2em;
+  padding: 1em 1em 1em 1em;
 }
 
-body>div#content>div#rest>article:last-child>ul>li:last-child{  /*MUSICS/ARTISTS*/
+body div#rest article ul li img{  /*MUSICS/ARTISTS*/
+  max-width: 100px;
+  display: block;
+ margin-left: auto;
+ margin-right: auto;
   /* margin-bottom: 50%; */
+}
+
+body  div#rest>article ul li div#artistname{
+  margin-top: .5em;
+  text-align: center;
 }

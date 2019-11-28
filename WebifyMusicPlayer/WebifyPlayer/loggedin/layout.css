@@ -7,72 +7,55 @@ body{
 }
 
 
-body>header>div#topbar{
+body header{
   grid-area:topbar;
   display:grid;
-  grid-template-columns: [logo-start] 1fr [logo-end-name-start] 1fr [name-end-signup-start] 10fr [signup-end-iconmenu-start] 1fr [iconmenu-end];
+  grid-template-columns: [logo-start] 1fr [logo-end-name-start] 1fr [name-end-signup-start] 10fr [signup-end];
   grid-template-rows: [page-start] auto [page-end];
-  grid-template-areas: "logo title signup ham";
+  grid-template-areas: "logo title signup";
 }
 
 
-body>header>div#topbar>img{
+body header img{
   grid-area:logo;
   align-self: center;
   justify-self:end;
 }
 
-body>header>div#topbar>h1{
+body header h1{
   grid-area: title;
   align-self: center;
 }
 
-body>header>div#topbar>div#signup{
+body header div#signup{
   grid-area: signup;
   justify-self:end;
   align-self: center;
 }
 
-body>header>div#topbar>div#icon{
-  grid-area: ham;
-  align-self: center;
-  justify-self: center;
-
-}
 
 /*  content*/
 
-body>div#content{
-  grid-area: contentpage;
-  display: grid;
-  grid-template-columns: [content-start] 10fr [content-end-sidebar-start] 1fr [sidebar-end];
-  grid-template-rows: [page-start] auto [page-end];
-  grid-template-areas: "cont side";
+body header div#iconmenu{
+  grid-area:side;
 }
 
-body>div#content>div#iconmenu{
-  grid-area: side;
+body header div#rest{
+  grid-area:contentpage;
 }
 
-body>div#content>div#iconmenu>ul li{
-  display:flex;
-  flex-direction: column;
+body header div#rest article{
+
+display: flex;
+flex-direction: column;
 }
 
-body>div#content>div#iconmenu ul li a{
+body div#rest article ul{
   flex-grow: 1;
-}
-
-body>div#content article{
-  grid-area: cont;
   display:flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 
-body>div#content article  h1{
-  flex-grow: 2;
-}
-
-body>div#content article ul li{
+body div#rest article ul div{
   flex-grow: 1;
 }

@@ -8,16 +8,9 @@ body header div#topbar div#signup a:last-child:hover{
 } */
 
 
-
-
-
-
-
-
-
 /* MENU ICON*/
 
-body div#content>div#iconmenu>ul li a:hover{
+body div#iconmenu>ul li a:hover{
   color:white;
 }
 
@@ -26,19 +19,14 @@ body div#topbar div#icon{
 
 }
 
-body div#topbar div#icon input#hamb{
-  font-size: 4em;
-  position:absolute;
-  opacity:0;
-
+body div#iconmenu{
+  width: 0%;
+  opacity: 0;
 }
 
-body div#topbar div#icon > label[for="hamb"]::before{   /*uncheck state*/
-  content: "\2630";
-  justify-self:center;
-}
-
-body div#topbar div#icon input#hamb:checked ~label[for="hamb"]::before{ /*check state*/
-  content: "\2715";
-  justify-self:center;
+body div#iconmenu:hover{
+  width: 100%;
+  transition: all 0.5s ease;
+  color: white;
+  opacity:1;
 }
