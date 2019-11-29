@@ -6,6 +6,7 @@ body header{
   color: white;
   background-color: #0b0b0b;
   font-family: "Georgia", serif;
+  /* position:fixed; */
 }
 
 body header img{
@@ -93,7 +94,7 @@ body div#rest>article>ul li img{
  margin-right: auto;
 }
 
-body  div#rest>article ul li div#artistname{
+body  div#rest>article ul li div{
   margin-top: .5em;
   text-align: center;
 }
