@@ -14,10 +14,12 @@ body div#topbar div#icon{
 body div#iconmenu{
   opacity:0;
   width:0%;
+  height:100%;
 }
 
-body div#iconmenu:hover{
+body div#iconmenu-clone:hover > div#iconmenu{
   transition: all 0.5s ease;
   opacity:1;
   width:100%;
+  background-color: #282828;
 }

@@ -39,9 +39,12 @@ body header div#signup a:nth-child(2){ /*  Login     */
 
 /*  CONTENT  */
 
+body div#iconmenu-clone {
+  background-color: #121212;
+}
+
 body div#iconmenu{
   background-color: #282828;
-
 }
 
 body div#iconmenu>ul{
