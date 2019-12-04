@@ -100,6 +100,12 @@ body div#rest>article>ul li img{
 body  div#rest>article ul li div{
   margin-top: .5em;
   text-align: center;
+
+}
+
+body  div#rest>article ul li a{
+  text-decoration: none;
+  color: #adb3b3;
 }
 
 
