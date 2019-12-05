@@ -71,10 +71,10 @@ CREATE TABLE playlists_trends_by_genre (
   id_genre INTEGER references genre
 );
 
-insert into normal_user values (1, 'abcd@gmail.com', '1324');
-insert into normal_user values (2, 'odiad@gmail.com', 'asdf');
-insert into normal_user values (3, 'aasdfd@gmail.com', '1gh4');
-insert into normal_user values (4, 'ioijcd@gmail.com', '13sdfgsdfg4');
+insert into normal_user values (1, 'abcd@gmail.com','welelel', '1324');
+insert into normal_user values (2, 'odiad@gmail.com','f123', 'asdf');
+insert into normal_user values (3, 'aasdfd@gmail.com','conaca', '1gh4');
+insert into normal_user values (4, 'ioijcd@gmail.com','bambora', '13sdfgsdfg4');
 
 insert into music values (100,'ye','kanye','aosd', 120);
 insert into music values (101,'earfquake','tyler','igor', 120);
