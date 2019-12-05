@@ -9,7 +9,9 @@ body header{
 }
 
 body header img{
-    max-width: 75px;
+  margin-left: 1em;
+  margin-right: 1em;
+  max-width: 75px;
 }
 
 body header div#signup a{
@@ -30,20 +32,20 @@ body header div#signup a:nth-child(2){ /*  Login     */
   border-radius: 25px;
 }
 
-body div#signin form input[type=text]{
+body form input[type=text]{
   border-style: hidden;
-  font-size: 2em;
+  font-size: 1em;
   padding: 1em 1em 1em 1em;
   background-color: #262626;
   color: #adb3b3;
   border-radius: 25px;
 }
 
-body div#signin form input[type=submit]{
+body form input[type=submit]{
   background-color: #262626;
   color: #adb3b3;
   border-style: hidden;
-  font-size: 2em;
+  font-size: 1em;
   padding: 1em 1em 1em 1em;
   border-radius: 25px;
 }
@@ -54,11 +56,14 @@ body div#sidebar{
 }
 
 body div#sidebar div{
-
   text-align: center;
 }
 
 body div#sidebar div a{
   color:white;
   text-decoration: none;
+}
+
+body form{
+  justify-self:center;
 }

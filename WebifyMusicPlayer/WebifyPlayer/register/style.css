@@ -34,7 +34,7 @@ body header div#signup a:nth-child(2){ /*  Login     */
 
 body form input[type=text]{
   border-style: hidden;
-  font-size: 2em;
+  font-size: 1em;
   padding: 1em 1em 1em 1em;
   background-color: #262626;
   color: #adb3b3;
@@ -45,7 +45,7 @@ body form input[type=submit]{
   background-color: #262626;
   color: #adb3b3;
   border-style: hidden;
-  font-size: 2em;
+  font-size: 1em;
   padding: 1em 1em 1em 1em;
   border-radius: 25px;
 }
@@ -63,4 +63,9 @@ body div#sidebar div{
 body div#sidebar div a{
   color:white;
   text-decoration: none;
+}
+
+body form{
+  justify-self:center;
+  align-self:center;
 }

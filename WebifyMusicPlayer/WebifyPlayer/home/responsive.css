@@ -7,10 +7,6 @@ body header div#signup a:last-child:hover{
     background-color: blue;
 }
 
-body div#topbar div#icon{
-  font-size: 4em
-}
-
 body div#iconmenu{
   opacity:0;
   width:0%;

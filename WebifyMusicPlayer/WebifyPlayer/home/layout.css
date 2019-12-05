@@ -36,10 +36,6 @@ body div#iconmenu-clone{
   grid-area: sidebar;
 }
 
-body div#iconmenu-clone > div#iconmenu {
-
-}
-
 body div#iconmenu-clone > div#iconmenu ul{
 display:flex;
 flex-direction: column;

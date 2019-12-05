@@ -8,11 +8,9 @@ body header{
   font-family: "Georgia", serif;
 }
 
-
 body header img{
-  margin-left: 4em;
+  margin-left: 1em;
   margin-right: 1em;
-  border-radius: 50%;
   max-width: 75px;
 }
 

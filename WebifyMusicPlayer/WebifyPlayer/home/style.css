@@ -6,13 +6,11 @@ body header{
   color: white;
   background-color: #0b0b0b;
   font-family: "Georgia", serif;
-  /* position:fixed; */
 }
 
 body header img{
   margin-left: 1em;
   margin-right: 1em;
-  border-radius: 50%;
   max-width: 75px;
 }
 
@@ -107,114 +105,3 @@ body  div#rest>article ul li a{
   text-decoration: none;
   color: #adb3b3;
 }
-
-
-
-
-
-
-
-/* body{                      OLD VERSION
-
-  background-color:  #121212;
-}
-
-body header{
-  color: white;
-  background-color: #0b0b0b;
-  font-family: "Georgia", serif;
-}
-
-body header>div#topbar{
-  padding: 2em 2em 2em 2em;
-}
-
-body header>div#topbar img{
-  margin-left: 1em;
-  margin-right: 1em;
-  border-radius: 50%;
-  max-width: 75px;
-}
-
-body header>div#topbar>div#signup a{
-  text-decoration: none;
-  color:white;
-}
-
-body header>div#topbar>div#signup>a:nth-child(1){
-  margin-right: 1em;
-  padding:1em 1em 1em 1em;
-  border-radius: 25px;
-  border: 2px solid #b2b2b2;
-}
-
-body header>div#topbar>div#signup>a:nth-child(2){
-  padding: 1em 1.5em 1em 1.5em;
-  background-color: #034f84;
-  border-radius: 25px;
-}
-
-
-
-
-
-
-body div#content>div#iconmenu{
-  background-color: #282828;
-
-}
-
-body div#content>div#iconmenu>ul{
-  list-style-type: none;
-
-}
-
-body div#content>div#iconmenu>ul li a{
-  text-decoration: none;
-  color:grey;
-  margin-top: 2em;
-}
-
-body div#content>div#iconmenu>ul li a:hover{
-  color:white;
-}
-
-body div#content>div#iconmenu ul>li:nth-child(1)>a {
-  color:white;
-  border-style: hidden hidden hidden solid;
-  border-color: #034f84;
-}
-
-body>div#content{
-  margin: 0em 2em 2em 2em;
-}
-
-body>div#content>div#rest{
-  margin-top: 2em;
-}
-
-body>div#content>div#rest>article h2{
-  color:white;
-  margin-left: 3em;
-}
-
-body>div#content>div#rest>article>ul{
-  list-style-type: none;
-}
-
-body>div#content>div#rest>article ul li{
-  color: #adb3b3;
-  background-color: #262626;
-  border-radius: 25px;
-  margin: 2em 2em 2em 2em;
-  padding: 1em 1em 1em 1em;
-}
-
-body>div#content>div#rest>article>ul li img{
-  max-width: 100px;
-}
-
-body>div#content>div#rest>article ul li div#artistname{
-  margin-top: .5em;
-  text-align: center;
-} */

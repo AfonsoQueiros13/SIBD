@@ -19,7 +19,6 @@ body header{
 body header img{
   grid-area:logo;
   align-self: center;
-  justify-self:end;
 }
 
 body header h1{
