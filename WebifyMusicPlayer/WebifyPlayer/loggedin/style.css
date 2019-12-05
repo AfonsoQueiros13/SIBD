@@ -44,7 +44,7 @@ body div#iconmenu ul{
 body div#iconmenu>ul li a{
   text-decoration: none;
   color:grey;
-  /* margin-top: 2em; */
+  margin-top: 2em;
 }
 
 body div#iconmenu ul>li:nth-child(1)>a {
@@ -55,11 +55,12 @@ body div#iconmenu ul>li:nth-child(1)>a {
 
 
 body div#rest{
-  margin: 2em 2em 2em 2em;
+  margin-top: 2em;
 }
 
 body div#rest article h2{ /* TRENDING,... */
   color:white;
+  margin-left: 3em;
 }
 
 body div#rest article ul{
@@ -77,12 +78,17 @@ body div#rest>article>ul li{  /*MUSICS/ARTISTS*/
 body div#rest article ul li img{  /*MUSICS/ARTISTS*/
   max-width: 100px;
   display: block;
- margin-left: auto;
- margin-right: auto;
-  /* margin-bottom: 50%; */
+  margin-left: auto;
+  margin-right: auto;
 }
 
-body  div#rest>article ul li div#artistname{
+body  div#rest>article ul li div{
   margin-top: .5em;
   text-align: center;
+
+}
+
+body  div#rest>article ul li a{
+  text-decoration: none;
+  color: #adb3b3;
 }

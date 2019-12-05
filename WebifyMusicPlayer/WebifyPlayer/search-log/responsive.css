@@ -1,0 +1,13 @@
+body div#sidebar, sidebar#div div{
+  width: 0%;
+  opacity: 0;
+}
+
+
+
+body div#sidebar:hover{
+  width: 100%;
+  transition: all 0.5s ease;
+  color: white;
+  opacity:1;
+}
