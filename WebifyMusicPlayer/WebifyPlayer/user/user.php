@@ -16,7 +16,7 @@ function selectUser($username,$password)
   global $dbh;
   $query = "SELECT * FROM normal_user WHERE username = ? AND passwd = ?";
   $stmt= $dbh->prepare($query);
-  $stmt->execute(array($username,$pasword));
+  $stmt->execute(array($username,$password));
   return $stmt->fetchAll(); // DESIRED VALUES RETURNED FROM DB
 }
 

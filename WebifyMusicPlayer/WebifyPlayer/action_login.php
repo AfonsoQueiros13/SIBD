@@ -11,7 +11,7 @@
   $username = $_POST['username'];
   $password = $_POST['password'];
   try {
-    $user_data = selectUser($username, $nick, $password); //RETURNS FOR $user_data db information for this user
+    $user_data = selectUser($username,$password); //RETURNS FOR $user_data db information for this user
     header('Location: ./login/login.html');
     exit;
   } catch(Exception $e) {
