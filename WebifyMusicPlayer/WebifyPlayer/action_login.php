@@ -9,11 +9,10 @@
   require_once('./user/user.php');
   
   $username = $_POST['username'];
-  $nick = $_POST['nick'];
   $password = $_POST['password'];
   try {
-    insertUser($username, $nick, $password);
-    header('Location: ./home/home.html');
+    $user_data = selectUser($username, $nick, $password); //RETURNS FOR $user_data db information for this user
+    header('Location: ./login/login.html');
     exit;
   } catch(Exception $e) {
     echo 'Exception -> ';
