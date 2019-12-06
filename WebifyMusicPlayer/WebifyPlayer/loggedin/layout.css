@@ -44,7 +44,6 @@ body header div#rest{
 }
 
 body header div#rest article{
-
 display: flex;
 flex-direction: column;
 }
