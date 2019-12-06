@@ -1,11 +1,10 @@
 body{
   display: grid;
   grid-template-columns: [sidebar-start] 1fr [sidebar-end-page-start] 10fr [page-end] 1fr [last-page];
-  grid-template-rows: [topbar-start] auto [topbar-end-content-start] auto [content-end];
+  grid-template-rows: [header-start] auto [header-end-content-start] auto [content-end];
   grid-template-areas: "topbar topbar topbar"
-                       "side contentpage useless";
+                       "side content useless";
 }
-
 
 body header{
   grid-area:topbar;
@@ -14,7 +13,6 @@ body header{
   grid-template-rows: [page-start] auto [page-end];
   grid-template-areas: "logo title signup";
 }
-
 
 body header img{
   grid-area:logo;
@@ -32,28 +30,39 @@ body header div#signup{
   align-self: center;
 }
 
-/*  content*/
-
-body header div#iconmenu{
-  grid-area:side;
+body div#cont{
+  grid-area:content;
+  display: grid;
+  grid-template-columns: [page-start] auto [page-end];
+  grid-template-rows: [page-start] auto [mp-fp] auto [page-end];
+  grid-template-areas: "myp"
+                       "follow";
 }
 
-body header div#rest{
-  grid-area:contentpage;
+body div#cont div#mp{
+  grid-area:myp;
+  text-align: left;
 }
 
-body div#rest article{
+body div#cont div#mp ul{
   display: flex;
   flex-direction: column;
 }
 
-body div#rest article ul{
+body div#cont div#mp ul li {
   flex-grow: 1;
-  display:flex;
-  flex-direction: row;
-  align-self: center;
 }
 
-body div#rest article ul div{
+body div#cont div#fp{
+  grid-area:follow;
+  text-align: left;
+}
+
+body div#cont div#fp ul{
+  display: flex;
+  flex-direction: column;
+}
+
+body div#cont div#fp ul li {
   flex-grow: 1;
 }

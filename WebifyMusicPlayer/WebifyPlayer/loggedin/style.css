@@ -33,12 +33,10 @@ body header div#signup{ /*  Login     */
 
 body div#iconmenu{
   background-color: #282828;
-
 }
 
 body div#iconmenu ul{
   list-style-type: none;
-
 }
 
 body div#iconmenu>ul li a{

@@ -74,6 +74,7 @@ body div#rest{
 body div#rest>article h2{ /* TRENDING,... */
   color:white;
   margin-left: 3em;
+  margin-top: 2em;
 }
 
 body div#rest>article>ul{
@@ -84,7 +85,8 @@ body div#rest>article ul li{  /*MUSICS / ARTISTS*/
   color: #adb3b3;
   background-color: #262626;
   border-radius: 25px;
-  margin: 2em 2em 2em 2em;
+  margin-left: 2em;
+  margin-right: 2em;
   padding: 1em 1em 1em 1em;
 }
 

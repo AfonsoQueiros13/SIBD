@@ -67,6 +67,7 @@ body div#coverart{
 }
 
 body div#coverart img{
+  margin-top: 4em;
   grid-area: img;
   justify-self: center;
 }
@@ -81,14 +82,25 @@ body div#content ul{
   grid-area:songs;
   display: flex;
   flex-flow: column;
-  align-items: start;
-  justify-content: center;
+  justify-content: end;
+  text-align: center;
 }
 
-body div#content ul li{
-  flex-grow: .2;
+/* body div#content ul div{
+  display: flex;
+  flex-direction: row;
+  flex-grow: .1;
+} */
+
+body div#content ul div{
+  display:flex;
+  flex-direction: row;
 }
 
-body div#content ul li:last-child{
-  flex-grow: 1;
+body div#content ul div li{
+  flex-grow: 2;
+}
+
+body div#content ul div button{
+  flex-grow: .1;
 }
