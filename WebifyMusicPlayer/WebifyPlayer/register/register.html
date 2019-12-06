@@ -1,48 +1,47 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-  <head>
+<head>
     <title> Webify </title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="layout.css">
     <link rel="stylesheet" href="responsive.css">
-  </head>
+</head>
 
-  <body>
+<body>
 
     <!--  TOP BAR   -->
     <!-- should only have logo and title  -->
     <header>
-      <img src="../images/logo.png" alt="logo">
-      <h1>Webify</h1>
-      <div id="signup">
-        <a href="../register/register.html">Register</a>
-        <a href="../login/login.html">Login </a>
-      </div>
+        <img src="../images/logo.png" alt="logo">
+        <h1>Webify</h1>
+        <div id="signup">
+            <a href="../register/register.html">Register</a>
+            <a href="../login/login.html">Login </a>
+        </div>
     </header>
 
     <div id="sidebar">
-      <div id="HOME">
-        <a href="../home/home.html">Home</a>
-      </div>
+        <div id="HOME">
+            <a href="../home/home.html">Home</a>
+        </div>
 
-      <div id="SEARCH">
-        <a href="../search/search.html">Search</a>
-      </div>
+        <div id="SEARCH">
+            <a href="../search/search.html">Search</a>
+        </div>
     </div>
 
     <!-- page content -->
     <!-- should have register form, sidebar to return to home and search,... -->
 
-    <form action="../home/home.html" method="post">
-      <input type="text" name="username" placeholder="username">  <br>
-      <input type="text" name="password" placeholder="password">  <br>
-      <input type="submit" value="Register">
+    <form action="../action_register.php" method="POST">
+        <input type="text" name="username" placeholder="username"> <br>
+        <input type="text" name="nick" placeholder="nick"> <br>
+        <input type="text" name="password" placeholder="password"> <br>
+        <input type="submit" value="Register to Webify">
     </form>
 
-
-
-  </body>
+</body>
 
 </html>

@@ -1,7 +1,10 @@
+
 <?php
-  function insertUser($username, $password) {
-    global $dbh;
-    $stmt = $dbh->prepare('INSERT INTO users VALUES(?, ?)');
-    $stmt->execute(array($username, sha1($password)));
-  }
+function insertUser($username, $nick, $password)
+{
+  global $dbh;
+  $id = 7;
+  $stmt = $dbh->prepare('INSERT INTO normal_user VALUES(?,?,?,?)');
+  $stmt->execute(array($id, $username, $nick, sha1($password)));
+}
 ?>
