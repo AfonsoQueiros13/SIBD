@@ -48,6 +48,7 @@ body div#iconmenu{
   background-color: #282828;
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;
+  color:white;
 }
 
 body div#iconmenu>ul{
