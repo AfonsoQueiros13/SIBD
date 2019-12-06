@@ -32,8 +32,18 @@ body header div#signup{
 
 /*  content*/
 
-body header div#iconmenu{
+body div#sidebar-clone{
   grid-area:side;
+}
+
+body div#sidebar-clone div#iconmenu ul{
+  display: flex;
+  flex-direction: column;
+}
+
+body div#sidebar-clone div#iconmenu ul li{
+flex-grow: 1;
+position: relative;
 }
 
 body header div#rest{
