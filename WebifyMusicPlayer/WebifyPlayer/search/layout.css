@@ -3,7 +3,7 @@ body{
   grid-template-columns: [sidebar-start] 1fr [sidebar-end-page-start] 10fr [page-end] 1fr [page-final];
   grid-template-rows: [topbar-start] auto [topbar-end-search-start] auto [search-end-content-start] auto [content-end];
   grid-template-areas: "topbar topbar topbar"
-                       "search search search"
+                       "side search useless"
                        "side contentpage useless";
 }
 
@@ -49,8 +49,11 @@ body div#initialtext{
   align-self: center;
 }
 
-body div#sidebar {
+body div#sidebar-clone {
   grid-area: side;
+}
+
+body div#sidebar{
   display:flex;
   flex-direction: column;
 }

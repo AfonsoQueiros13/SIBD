@@ -6,7 +6,8 @@ body header{
   color: white;
   background-color: #0b0b0b;
   font-family: "Georgia", serif;
-  border-radius: 50px;
+  /* border-radius: 50px; */
+  margin-bottom: 1em;
 }
 
 body header img{
@@ -41,6 +42,7 @@ body form input[type=text]{
   background-color: #262626;
   color: #adb3b3;
   border-radius: 25px;
+  margin-bottom: 1em;
 }
 
 body form input[type=submit]{
@@ -50,6 +52,7 @@ body form input[type=submit]{
   font-size: 1em;
   padding: 1em 1em 1em 1em;
   border-radius: 25px;
+  margin-top: 2em;
 }
 
 body div#sidebar{
