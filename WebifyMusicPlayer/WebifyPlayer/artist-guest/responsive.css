@@ -1,4 +1,4 @@
-body div#sidebar{
+body div#iconmenu{
   width: 0%;
   opacity: 0;
   height: 100%;
@@ -6,7 +6,7 @@ body div#sidebar{
 
 
 
-body div#sidebar-clone:hover div#sidebar{
+body div#sidebar-clone:hover div#iconmenu{
   width: 100%;
   transition: all 0.5s ease;
   color: white;
