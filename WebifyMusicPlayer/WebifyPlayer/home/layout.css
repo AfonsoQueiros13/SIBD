@@ -23,7 +23,7 @@ body header img{
 
 body header h1{
   grid-area: title;
-  justify-self:start;
+  align-self: center;
 }
 
 body header div#signup{

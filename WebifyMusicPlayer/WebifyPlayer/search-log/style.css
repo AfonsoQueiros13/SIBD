@@ -58,14 +58,11 @@ body div#sidebar{
   background-color: #282828;
 }
 
-body div#sidebar div{
-
-  align-self: center;
-  justify-self:center;
+body div#sidebar ul{
+  list-style-type: none;
 }
 
-body div#sidebar div a{
+body div#sidebar ul li a{
   color:white;
   text-decoration: none;
-
 }
