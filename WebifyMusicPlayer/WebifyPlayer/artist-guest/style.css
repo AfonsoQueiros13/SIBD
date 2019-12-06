@@ -6,6 +6,7 @@ body header{
   color: white;
   background-color: #0b0b0b;
   font-family: "Georgia", serif;
+  border-radius: 50px;
 }
 
 body header img{
@@ -17,6 +18,10 @@ body header img{
 body header div#signup a{
   text-decoration: none;
   color:white;
+}
+
+body header div#signup a:last-child{
+  margin-right: 2em;
 }
 
 /*CONTENT*/
@@ -54,13 +59,7 @@ body div#content ul{
 
 body div#content ul li {
   color:white;
-  background-color: grey;
+  background-color: #121212;
   border-radius: 75px;
   margin-bottom: 1em;
-}
-
-body div#content ul button{
-  background-color: grey;
-  border-radius: 50%;
-  color:white;
 }

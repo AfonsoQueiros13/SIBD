@@ -6,6 +6,7 @@ body header{
   color: white;
   background-color: #0b0b0b;
   font-family: "Georgia", serif;
+  border-radius: 50px;
 }
 
 body header img{
@@ -28,6 +29,7 @@ body header div#signup a:nth-child(1){ /*  Register  */
 
 body header div#signup a:nth-child(2){ /*  Login     */
   padding: 1em 1.5em 1em 1.5em;
+  margin-right: 2em;
   background-color: #034f84;
   border-radius: 25px;
 }
@@ -43,22 +45,20 @@ body div#iconmenu-clone {
 
 body div#iconmenu{
   background-color: #282828;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
 }
 
 body div#iconmenu>ul{
   list-style-type: none;
-
 }
 
 body div#iconmenu>ul li a{
   text-decoration: none;
   color:grey;
-  margin-top: 2em;
 }
 
-body div#iconmenu>ul li a:hover{
-  color:white;
-}
+
 
 body div#iconmenu ul>li:nth-child(1)>a {
   color:white;

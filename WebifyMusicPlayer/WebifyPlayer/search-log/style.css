@@ -6,6 +6,7 @@ body header{
   color: white;
   background-color: #0b0b0b;
   font-family: "Georgia", serif;
+  border-radius: 50px;
 }
 
 
@@ -22,6 +23,7 @@ body header div#signup{ /*  Login     */
   border-radius: 25px;
   text-decoration: none;
   color:white;
+  margin-right: 2em;
 }
 
 body h2{

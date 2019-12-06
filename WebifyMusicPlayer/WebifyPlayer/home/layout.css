@@ -36,13 +36,20 @@ body div#iconmenu-clone{
   grid-area: sidebar;
 }
 
-body div#iconmenu-clone > div#iconmenu ul{
-display:flex;
-flex-direction: column;
+body div#iconmenu-clone div#iconmenu ul{
+  display:flex;
+  flex-direction: column;
+  height:100%;
 }
 
-body div#iconmenu-clone > div#iconmenu ul li{
-  flex-grow: 1;
+body div#iconmenu-clone div#iconmenu ul li{
+  flex-grow: .1;
+  margin:auto;
+}
+
+body div#iconmenu-clone div#iconmenu ul li:last-child{
+  flex-grow: .5;
+  margin:auto;
 }
 
 body div#rest{
@@ -51,8 +58,6 @@ body div#rest{
 }
 
 body div#rest article{
-
-
   display: flex;
   flex-direction: column;
 }

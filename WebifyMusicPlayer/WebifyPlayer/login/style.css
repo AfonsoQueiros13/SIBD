@@ -6,6 +6,7 @@ body header{
   color: white;
   background-color: #0b0b0b;
   font-family: "Georgia", serif;
+  border-radius: 50px;
 }
 
 body header img{
@@ -30,6 +31,7 @@ body header div#signup a:nth-child(2){ /*  Login     */
   padding: 1em 1.5em 1em 1.5em;
   background-color: #034f84;
   border-radius: 25px;
+  margin-right: 2em;
 }
 
 body form input[type=text]{

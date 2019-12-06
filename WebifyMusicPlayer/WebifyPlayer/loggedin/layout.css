@@ -6,7 +6,6 @@ body{
                        "side contentpage useless";
 }
 
-
 body header{
   grid-area:topbar;
   display:grid;
@@ -14,7 +13,6 @@ body header{
   grid-template-rows: [page-start] auto [page-end];
   grid-template-areas: "logo title signup";
 }
-
 
 body header img{
   grid-area:logo;
