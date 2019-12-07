@@ -44,7 +44,7 @@ body div#sidebar-clone{
   display: grid;
   grid-template-columns: [page-start] auto [page-end];
   grid-template-rows: [menu-start] auto [menu-end] auto [page-end];
-  grid-template-areas: "menu" "blank";
+  grid-template-areas: "menu" "menu";
 }
 
 body div#sidebar-clone div#iconmenu{
@@ -98,7 +98,7 @@ body div#content ul{
   display: flex;
   flex-flow: column;
   text-align: center;
-  justify-self:start;
+  justify-content: end;
 }
 
 body div#content ul li{

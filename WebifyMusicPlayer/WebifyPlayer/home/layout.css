@@ -37,7 +37,7 @@ body div#iconmenu-clone{
   display: grid;
   grid-template-columns: [page-start] auto [page-end];
   grid-template-rows: [menu-start] 5fr [menu-end] 5fr [page-end];
-  grid-template-areas: "menu" "blank";
+  grid-template-areas: "menu" "menu";
 }
 
 body div#iconmenu-clone div#iconmenu{
