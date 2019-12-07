@@ -40,86 +40,43 @@
 
         <article>
             <!-- artists -> songs or just songs? -->
-            <h2>Trending</h2>
+            <h2>Trending-Albums</h2>
             <ul>
 
+              <?php
+              ini_set('display_errors',1);
+              ini_set('display_startup_errors',1);
+
+              require_once('../../config/init.php');
+              require_once('../../php_actions/action_album.php');
+
+              $all_albums=get_all_albums();
+
+              $count=1;
+
+              // foreach ($all_albums as $album) {
+
+                $album=get_album_by_id($count);
+
+              ?>
 
                 <li>
                     <a href="../artist-guest/artist-guest.php">
-                        <img src="../../images/albumcover.png" alt="artistcover">
+                        <img src="<?=$album['img_path']?>" alt="artistcover">
                         <div>
-                            Artist1
+                            <?=$album['artist']?>
+
+                            <?=$album['name_album']?>
                         </div>
                     </a>
                 </li>
 
 
-
-                <li>
-                    <a href="../artist-guest/artist-guest.php">
-                        <img src="../../images/albumcover.png" alt="artistcover">
-                        <div>
-                            Artist2
-                        </div>
-                    </a>
-                </li>
+              <?php?>
 
 
 
-                <li>
-                    <a href="../artist-guest/artist-guest.php">
-                        <img src="../../images/albumcover.png" alt="artistcover">
-                        <div>
-                            Artist3
-                        </div>
-                    </a>
-                </li>
 
-
-
-                <li>
-                    <a href="../artist-guest/artist-guest.php">
-                        <img src="../../images/albumcover.png" alt="artistcover">
-                        <div>
-                            Artist4
-                        </div>
-                    </a>
-                </li>
-
-
-
-                <li>
-                    <a href="../artist-guest/artist-guest.php">
-                        <img src="../../images/albumcover.png" alt="artistcover">
-                        <div>
-                            Artist5
-                        </div>
-                    </a>
-                </li>
-
-
-
-                <li>
-                    <a href="../artist-guest/artist-guest.php">
-                        <img src="../../images/albumcover.png" alt="artistcover">
-                        <div>
-                            Artist6
-                        </div>
-                    </a>
-                </li>
-
-
-
-                <li>
-                    <a href="../artist-guest/artist-guest.php">
-                        <img src="../../images/albumcover.png" alt="artistcover">
-                        <div>
-                            Artist7
-                        </div>
-                    </a>
-                </li>
-
-            </ul>
 
         </article>
 

@@ -66,7 +66,7 @@ CREATE TABLE playlist_musics (
 CREATE TABLE friends ( id_user integer references normal_user);
 
 --trends table--
-CREATE TABLE trends (id_music INTEGER references music);
+CREATE TABLE trends (id_album INTEGER references album);
 
 --liked_playlists table--
 CREATE TABLE liked_playlists (
@@ -91,6 +91,8 @@ insert into normal_user values (1, 'webify-admin@gmail.com','admin', 'admin');
 insert into profile values(1, 'admin', 'link', 1);
 
 insert into album values(1,'IGOR','Tyler, The Creator',12,'../../images/artists/tyler/tyler.jpeg');
+insert into album values(2,'Scorpion','Drake',1,'../../images/artists/drake/scorpion.jpg');
+
 
 insert into music values(1,1,'IGORS THEME','Tyler, The Creator',201);
 insert into music values(2,1,'EARFQUAKE','Tyler, The Creator',201);
@@ -104,3 +106,11 @@ insert into music values(9,1,'WHATS GOOD','Tyler, The Creator',201);
 insert into music values(10,1,'GONE, GONE/ THANK YOU','Tyler, The Creator',201);
 insert into music values(11,1,'I DONT LOVE YOU ANYMORE','Tyler, The Creator',201);
 insert into music values(12,1,'ARE WE STILL FRIENDS','Tyler, The Creator',201);
+
+insert into music values(13,2,'Jaded','Tyler, The Creator',201);
+insert into music values(14,2,'Finance','Tyler, The Creator',201);
+insert into music values(15,2,'Peak','Tyler, The Creator',201);
+insert into music values(16,2,'Mob Ties','Tyler, The Creator',201);
+
+insert into trends values(1);
+insert into trends values(2);
