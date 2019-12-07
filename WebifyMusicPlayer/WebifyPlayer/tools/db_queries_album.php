@@ -4,7 +4,6 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 /*REQUIRES TO RUN CORRECTY PHP SCRIPT*/
-require_once('../../config/init.php');
 
 function get_all_albums(){
   global $dbh;
