@@ -5,8 +5,8 @@
   error_reporting(E_ALL);
 
   /*REQUIRES TO RUN CORRECTY PHP SCRIPT*/
-  require_once('../config/init.php');
-  require_once('../tools/db_queries_user.php');
+  require_once('../../config/init.php');
+  require_once('../../tools/db_queries_user.php');
   
   $email = $_POST['email'];
   $nick = $_POST['nick'];

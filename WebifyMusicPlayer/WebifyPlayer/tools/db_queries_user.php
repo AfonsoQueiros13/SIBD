@@ -13,12 +13,12 @@ function insertUser($email, $nick, $password)
       $query = 'INSERT INTO normal_user VALUES(?,?,?,?)';
       $stmt = $dbh->prepare($query);
       $stmt->execute(array(null, $email, $nick, sha1($password))); //NULL AUTOINCREMENTS ID
-      header('Location: ../HTML_CSS/home/home.php');
+      header('Location: ../home/home.php');
   }
   else //ERROR INSERTING IN DB -> ALREADY EXISTS THIS E-MAIL
   { 
     //echo ("<script>alert('E-mail already exists!.');</script>");
-    echo ("<script>alert('E-mail already exists!');setTimeout(\"location.href = '../HTML_CSS/register/register.php';\",100);</script>");
+    echo ("<script>alert('E-mail already exists!');setTimeout(\"location.href = '../register/register.php';\",100);</script>");
     //header('Location: ../HTML_CSS/register/register.php');
 
   }

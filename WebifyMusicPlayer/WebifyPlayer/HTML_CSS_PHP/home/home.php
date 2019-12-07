@@ -17,10 +17,10 @@
     <header>
         <img src="../../images/logo.png" alt="logo">
         <h1>Webify</h1>
-            <div id="signup">
-                <a href="../register/register.php">Register</a>
-                <a href="../login/login.php">Login</a>
-            </div>
+        <div id="signup">
+            <a href="../register/register.php">Register</a>
+            <a href="../login/login.php">Login</a>
+        </div>
 
     </header>
 
@@ -43,36 +43,33 @@
             <h2>Trending-Albums</h2>
             <ul>
 
-              <?php
-              ini_set('display_errors',1);
-              ini_set('display_startup_errors',1);
+                <?php
+                ini_set('display_errors', 1);
+                ini_set('display_startup_errors', 1);
+                require_once('../../tools/db_queries_album.php');
 
-              require_once('../../config/init.php');
-              require_once('../../php_actions/action_album.php');
+                $all_albums = get_all_albums();
 
-              $all_albums=get_all_albums();
+                $count = 1;
 
-              $count=1;
+                foreach ($all_albums as $album) {
 
-              // foreach ($all_albums as $album) {
+                    $album = get_album_by_id($count++);
+                    ?>
 
-                $album=get_album_by_id($count);
+                    <li>
+                        <a href="../artist-guest/artist-guest.php">
+                            <img src="<?= $album['img_path'] ?>" alt="artistcover">
+                            <div>
+                                <?= $album['artist'] ?>
 
-              ?>
-
-                <li>
-                    <a href="../artist-guest/artist-guest.php">
-                        <img src="<?=$album['img_path']?>" alt="artistcover">
-                        <div>
-                            <?=$album['artist']?>
-
-                            <?=$album['name_album']?>
-                        </div>
-                    </a>
-                </li>
+                                <?= $album['name_album'] ?>
+                            </div>
+                        </a>
+                    </li>
 
 
-              <?php?>
+                <? } ?>
 
 
 
