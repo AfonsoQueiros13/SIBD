@@ -1,9 +1,9 @@
 body{
   display: grid;
-  grid-template-columns: [sidebar-start] 1fr [sidebar-end-page-start] 10fr [page-end] 1fr [page-final];
+  grid-template-columns: [sidebar-start] 3fr [sidebar-end-page-start] 8fr [page-end] 3fr [page-final];
   grid-template-rows: [topbar-start] auto [topbar-end-content-start]  auto [content-end];
   grid-template-areas: "topbar topbar topbar"
-                       "sidebar content useless";
+                       "sidebar contentpage useless";
 }
 
 body  header{
@@ -30,19 +30,32 @@ body header div#signup{
   align-self: center;
 }
 
-body div#sidebar{
-  grid-area:sidebar;
+body div#sidebar-clone{
+  grid-area: sidebar;
+  display: grid;
+  grid-template-columns: [page-start] auto [page-end];
+  grid-template-rows: [menu-start] auto [menu-end] auto [page-end];
+  grid-template-areas: "menu" "blank";
+}
+
+body div#sidebar-clone div#sidebar{
+  grid-area: menu;
+}
+
+body div#sidebar-clone div#sidebar ul{
   display:flex;
   flex-direction: column;
-  background-color: #282828;
-  width:100%;
-  height:100%;
+  height: 100%;
 }
 
-body  div#sidebar div{
-  flex-grow: 1;
+body  div#sidebar-clone div#sidebar ul li{
+  flex-grow: .1;
 }
 
-body form {
-  grid-area: content;
+body  div#sidebar-clone div#sidebar ul li:last-child{
+flex-grow: .5;
+}
+
+body form{
+  grid-area:contentpage;
 }

@@ -6,6 +6,7 @@ body div#sidebar{
 
 body div#sidebar-clone:hover div#sidebar{
   width: 100%;
+  height: 100%;
   transition: all 0.5s ease;
   color: white;
   opacity:1;

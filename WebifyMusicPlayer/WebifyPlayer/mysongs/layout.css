@@ -1,9 +1,9 @@
 body{
   display: grid;
-  grid-template-columns: [sidebar-start] 1fr [sidebar-end-page-start] 10fr [page-end] 1fr [last-page];
+  grid-template-columns: [sidebar-start] 2fr [sidebar-end-page-start] 8fr [page-end] 2fr [last-page];
   grid-template-rows: [header-start] auto [header-end-content-start] auto [content-end];
   grid-template-areas: "topbar topbar topbar"
-                       "side content useless";
+                       "sidebar content useless";
 }
 
 body header{
@@ -22,6 +22,32 @@ body header img{
 body header h1{
   grid-area: title;
   align-self: center;
+}
+
+body div#sidebar-clone{
+  grid-area: sidebar;
+  display: grid;
+  grid-template-columns: [page-start] auto [page-end];
+  grid-template-rows: [menu-start] auto [menu-end] auto [page-end];
+  grid-template-areas: "menu" "blank";
+}
+
+body div#sidebar-clone div#iconmenu{
+  grid-area: menu;
+}
+
+body div#sidebar-clone div#iconmenu ul{
+  display:flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+body  div#sidebar-clone div#iconmenu ul li{
+  flex-grow: .1;
+}
+
+body  div#sidebar-clone div#icon ul li:last-child{
+flex-grow: .5;
 }
 
 body header div#signup{

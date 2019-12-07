@@ -1,9 +1,9 @@
 body{
   display: grid;
-  grid-template-columns: [sidebar-start] 1fr [sidebar-end-page-start] 10fr [page-end] 1fr [last-page];
+  grid-template-columns: [sidebar-start] 2fr [sidebar-end-page-start] 8fr [page-end] 2fr [last-page];
   grid-template-rows: [topbar-start] auto [topbar-end-content-start] auto [content-end];
   grid-template-areas: "topbar topbar topbar"
-                       "side contentpage useless";
+                       "sidebar contentpage useless";
 }
 
 body header{
@@ -39,8 +39,30 @@ body header div#signup{ /*  Login     */
 
 /*CONTENT*/
 
-body header div#iconmenu{
-  grid-area:side;
+body div#sidebar-clone{
+  grid-area: sidebar;
+  display: grid;
+  grid-template-columns: [page-start] auto [page-end];
+  grid-template-rows: [menu-start] auto [menu-end] auto [page-end];
+  grid-template-areas: "menu" "blank";
+}
+
+body div#sidebar-clone div#iconmenu{
+  grid-area: menu;
+}
+
+body div#sidebar-clone div#iconmenu ul{
+  display:flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+body  div#sidebar-clone div#iconmenu ul li{
+  flex-grow: .1;
+}
+
+body  div#sidebar-clone div#icon ul li:last-child{
+flex-grow: .5;
 }
 
 body div#content{
@@ -75,14 +97,14 @@ body div#content ul{
   grid-area:songs;
   display: flex;
   flex-flow: column;
-  align-items: start;
-  justify-content: center;
+  text-align: center;
+  justify-self:start;
 }
 
 body div#content ul li{
-  flex-grow: .2;
+  flex-grow: .1;
 }
 
 body div#content ul li:last-child{
-  flex-grow: 1;
+  flex-grow: .2;
 }

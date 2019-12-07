@@ -1,8 +1,8 @@
 
 body{
   display: grid;
-  grid-template-columns: [sidebar-start] auto [sidebar-end-page-start] auto [page-end];
-  grid-template-rows: [topbar-start] 1fr [topbar-end-content-start] 10fr [content-end] 1fr [space-start-end];
+  grid-template-columns: [sidebar-start] 2fr [sidebar-end-page-start] 8fr [page-end] 2fr [page-final];
+  grid-template-rows: [topbar-start] auto [topbar-end-content-start] auto [content-end];
   grid-template-areas: "topbar topbar topbar"
                        "sidebar contentpage space";
 }
@@ -34,6 +34,14 @@ body header div#signup{
 
 body div#iconmenu-clone{
   grid-area: sidebar;
+  display: grid;
+  grid-template-columns: [page-start] auto [page-end];
+  grid-template-rows: [menu-start] 5fr [menu-end] 5fr [page-end];
+  grid-template-areas: "menu" "blank";
+}
+
+body div#iconmenu-clone div#iconmenu{
+  grid-area: menu;
 }
 
 body div#iconmenu-clone div#iconmenu ul{
@@ -44,17 +52,15 @@ body div#iconmenu-clone div#iconmenu ul{
 
 body div#iconmenu-clone div#iconmenu ul li{
   flex-grow: .1;
-  margin:auto;
+  text-align: left;
 }
 
 body div#iconmenu-clone div#iconmenu ul li:last-child{
   flex-grow: .5;
-  margin:auto;
 }
 
 body div#rest{
   grid-area: contentpage;
-
 }
 
 body div#rest article{

@@ -27,20 +27,39 @@ body header div#signup a:last-child{
 
 /*CONTENT*/
 
+
+body div#sidebar-clone{
+  background-color: #121212;
+}
+
 body div#iconmenu{
   background-color: #282828;
-
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  color:white;
 }
 
 body div#iconmenu ul{
   list-style-type: none;
 }
 
-body div#iconmenu>ul li a{
+body div#iconmenu ul li{
+  margin-top: 2em;
+  margin-right: 2em;
+  font-size: 1.1em;
+}
+
+body div#iconmenu ul li i{
+  font-size: 1.5em;
+  margin-right: 1em;
+
+}
+
+body div#iconmenu ul li a{
   text-decoration: none;
   color:grey;
-  margin-top: 2em;
 }
+
 
 body div#content div#coverart img{
   margin-bottom: 1em;

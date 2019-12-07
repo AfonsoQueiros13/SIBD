@@ -14,7 +14,6 @@ body header{
 body header img{
   margin-left: 1em;
   margin-right: 1em;
-  border-radius: 50%;
   max-width: 75px;
 }
 
@@ -37,6 +36,8 @@ body header div#signup a:nth-child(2){ /*  Login     */
   margin-right: 2em;
 }
 
+/*CONTENT*/
+
 body h2{
   color:white;
   text-align: center;
@@ -50,35 +51,61 @@ body h3{
 
 
 body form input[type=text]{
+  margin-left: 1em;
   border-style: hidden;
   font-size: 2em;
   padding: 1em 1em 1em 1em;
   background-color: #262626;
   color: #adb3b3;
-  border-radius: 25px;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
 }
 
 body form input[type=submit]{
+  margin-right: 1em;
   background-color: #262626;
   color: #adb3b3;
   border-style: hidden;
   font-size: 2em;
   padding: 1em 1em 1em 1em;
-  border-radius: 25px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+body div#sidebar-clone{
+  background-color: #121212;
 }
 
 body div#sidebar{
   background-color: #282828;
-}
-
-body div#sidebar div{
-
-  align-self: center;
-  justify-self:center;
-}
-
-body div#sidebar div a{
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
   color:white;
-  text-decoration: none;
+}
 
+body div#sidebar ul{
+  list-style-type: none;
+}
+
+body div#sidebar ul li{
+  margin-top: 2em;
+  margin-right: 2em;
+  font-size: 1.1em;
+}
+
+body div#sidebar ul li i{
+  font-size: 1.5em;
+  margin-right: 1em;
+
+}
+
+body div#sidebar ul li a{
+  text-decoration: none;
+  color:grey;
+}
+
+body div#sidebar ul>li:nth-child(2)>a {
+  color:white;
+  border-style: hidden hidden hidden solid;
+  border-color: #034f84;
 }

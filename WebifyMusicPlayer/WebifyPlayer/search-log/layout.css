@@ -1,10 +1,10 @@
 body{
   display:grid;
-  grid-template-columns: [sidebar-start] 1fr [sidebar-end-page-start] 10fr [page-end] 1fr [page-final];
+  grid-template-columns: [sidebar-start] 2fr [sidebar-end-page-start] 8fr [page-end] 2fr [page-final];
   grid-template-rows: [topbar-start] auto [topbar-end-search-start] auto [search-end-content-start] auto [content-end];
   grid-template-areas: "topbar topbar topbar"
-                       "side search useless"
-                       "side contentpage useless";
+                       "sidebar search useless"
+                       "sidebar contentpage useless";
 }
 
 body header{
@@ -49,15 +49,28 @@ body div#initialtext{
   align-self: center;
 }
 
-body div#sidebar-clone {
-  grid-area: side;
+body div#sidebar-clone{
+  grid-area: sidebar;
+  display: grid;
+  grid-template-columns: [page-start] auto [page-end];
+  grid-template-rows: [menu-start] auto [menu-end] auto [page-end];
+  grid-template-areas: "menu" "blank";
 }
 
-body div#sidebar-clone div#sidebar{
+body div#sidebar-clone div#iconmenu{
+  grid-area: menu;
+}
+
+body div#sidebar-clone div#iconmenu ul{
   display:flex;
   flex-direction: column;
+  height: 100%;
 }
 
-body div#sidebar div {
-  flex-grow: 1;
+body  div#sidebar-clone div#iconmenu ul li{
+  flex-grow: .1;
+}
+
+body  div#sidebar-clone div#iconmenu ul li:nth-child(4){
+flex-grow: .5;
 }

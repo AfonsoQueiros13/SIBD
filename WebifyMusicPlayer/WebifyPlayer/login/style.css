@@ -35,6 +35,9 @@ body header div#signup a:nth-child(2){ /*  Login     */
   margin-right: 2em;
 }
 
+/*CONTENT*/
+
+
 body form input[type=text]{
   border-style: hidden;
   font-size: 1em;
@@ -55,20 +58,39 @@ body form input[type=submit]{
   margin-top: 2em;
 }
 
+body div#sidebar-clone{
+  background-color: #121212;
+}
+
 body div#sidebar{
-  align-self: center;
-
-}
-
-body div#sidebar div{
-  text-align: center;
-}
-
-body div#sidebar div a{
+  background-color: #282828;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
   color:white;
+}
+
+body div#sidebar ul{
+  list-style-type: none;
+}
+
+body div#sidebar ul li{
+  margin-top: 2em;
+  margin-right: 2em;
+  font-size: 1.1em;
+}
+
+body div#sidebar ul li i{
+  font-size: 1.5em;
+  margin-right: 1em;
+
+}
+
+body div#sidebar ul li a{
   text-decoration: none;
+  color:grey;
 }
 
 body form{
   justify-self:center;
+  align-self:center;
 }
