@@ -12,7 +12,7 @@
   $password = $_POST['password'];
   try {
     $user_data = selectUser($username,$password); //RETURNS FOR $user_data db information for this user
-    header('Location: ./login/login.html');
+    header('Location: ./login/login.php');
     exit;
   } catch(Exception $e) {
     echo 'Exception -> ';

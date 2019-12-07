@@ -29,11 +29,11 @@
     <div id="sidebar-clone">
       <div id="iconmenu">
         <ul>
-          <li><i class="fa fa-home"></i><a href="../loggedin/loggedin.html">Home</a></li>
-          <li><i class="fa fa-search"></i><a href="../search-log/search-log.html">Search</a></li>
-          <li><i class="fa fa-music"></i><a href="../mysongs/mysongs.html">My Songs</a></li>
-          <li><i class="fa fa-archive"></i><a href="../playlists/playlists.html">Playlists</a></li>
-          <li><i class="fa fa-power-off"></i><a href="../home/home.html">Logout </a></li>
+          <li><i class="fa fa-home"></i><a href="../loggedin/loggedin.php">Home</a></li>
+          <li><i class="fa fa-search"></i><a href="../search-log/search-log.php">Search</a></li>
+          <li><i class="fa fa-music"></i><a href="../mysongs/mysongs.php">My Songs</a></li>
+          <li><i class="fa fa-archive"></i><a href="../playlists/playlists.php">Playlists</a></li>
+          <li><i class="fa fa-power-off"></i><a href="../home/home.php">Logout </a></li>
         </ul>
       </div>
     </div>
@@ -48,7 +48,7 @@
 
 
               <li>
-                <a href="../artist-log/artist-log.html">
+                <a href="../artist-log/artist-log.php">
                   <img src="../../images/albumcover.png" alt="artistcover">
                   <div>
                     Artist1
@@ -59,7 +59,7 @@
 
 
               <li>
-                <a href="../artist-log/artist-log.html">
+                <a href="../artist-log/artist-log.php">
                   <img src="../../images/albumcover.png" alt="artistcover">
                   <div>
                     Artist2
@@ -70,7 +70,7 @@
 
 
               <li>
-                <a href="../artist-log/artist-log.html">
+                <a href="../artist-log/artist-log.php">
                   <img src="../../images/albumcover.png" alt="artistcover">
                   <div>
                     Artist3
@@ -81,7 +81,7 @@
 
 
               <li>
-                <a href="../artist-log/artist-log.html">
+                <a href="../artist-log/artist-log.php">
                   <img src="../../images/albumcover.png" alt="artistcover">
                   <div>
                     Artist4
@@ -92,7 +92,7 @@
 
 
               <li>
-                <a href="../artist-log/artist-log.html">
+                <a href="../artist-log/artist-log.php">
                   <img src="../../images/albumcover.png" alt="artistcover">
                   <div>
                     Artist5
@@ -103,7 +103,7 @@
 
 
               <li>
-                <a href="../artist-log/artist-log.html">
+                <a href="../artist-log/artist-log.php">
                   <img src="../../images/albumcover.png" alt="artistcover">
                   <div>
                     Artist6
@@ -114,7 +114,7 @@
 
 
               <li>
-                <a href="../artist-log/artist-log.html">
+                <a href="../artist-log/artist-log.php">
                   <img src="../../images/albumcover.png" alt="artistcover">
                   <div>
                     Artist7
@@ -135,7 +135,7 @@
 
 
           <li>
-            <a href="../artist-log/artist-log.html">
+            <a href="../artist-log/artist-log.php">
               <img src="../../images/albumcover.png" alt="artistcover">
               <div>
                 Artist1
@@ -146,7 +146,7 @@
 
 
           <li>
-            <a href="../artist-log/artist-log.html">
+            <a href="../artist-log/artist-log.php">
               <img src="../../images/albumcover.png" alt="artistcover">
               <div>
                 Artist2
@@ -157,7 +157,7 @@
 
 
           <li>
-            <a href="../artist-log/artist-log.html">
+            <a href="../artist-log/artist-log.php">
               <img src="../../images/albumcover.png" alt="artistcover">
               <div>
                 Artist3
@@ -168,7 +168,7 @@
 
 
           <li>
-            <a href="../artist-log/artist-log.html">
+            <a href="../artist-log/artist-log.php">
               <img src="../../images/albumcover.png" alt="artistcover">
               <div>
                 Artist4
@@ -179,7 +179,7 @@
 
 
           <li>
-            <a href="../artist-log/artist-log.html">
+            <a href="../artist-log/artist-log.php">
               <img src="../../images/albumcover.png" alt="artistcover">
               <div>
                 Artist5
@@ -190,7 +190,7 @@
 
 
           <li>
-            <a href="../artist-log/artist-log.html">
+            <a href="../artist-log/artist-log.php">
               <img src="../../images/albumcover.png" alt="artistcover">
               <div>
                 Artist6
@@ -201,7 +201,7 @@
 
 
           <li>
-            <a href="../artist-log/artist-log.html">
+            <a href="../artist-log/artist-log.php">
               <img src="../../images/albumcover.png" alt="artistcover">
               <div>
                 Artist7
@@ -220,7 +220,7 @@
 
 
           <li>
-            <a href="../artist-log/artist-log.html">
+            <a href="../artist-log/artist-log.php">
               <img src="../../images/albumcover.png" alt="artistcover">
               <div>
                 Artist1
@@ -231,7 +231,7 @@
 
 
           <li>
-            <a href="../artist-log/artist-log.html">
+            <a href="../artist-log/artist-log.php">
               <img src="../../images/albumcover.png" alt="artistcover">
               <div>
                 Artist2
@@ -242,7 +242,7 @@
 
 
           <li>
-            <a href="../artist-log/artist-log.html">
+            <a href="../artist-log/artist-log.php">
               <img src="../../images/albumcover.png" alt="artistcover">
               <div>
                 Artist3
@@ -253,7 +253,7 @@
 
 
           <li>
-            <a href="../artist-log/artist-log.html">
+            <a href="../artist-log/artist-log.php">
               <img src="../../images/albumcover.png" alt="artistcover">
               <div>
                 Artist4
@@ -264,7 +264,7 @@
 
 
           <li>
-            <a href="../artist-log/artist-log.html">
+            <a href="../artist-log/artist-log.php">
               <img src="../../images/albumcover.png" alt="artistcover">
               <div>
                 Artist5
@@ -275,7 +275,7 @@
 
 
           <li>
-            <a href="../artist-log/artist-log.html">
+            <a href="../artist-log/artist-log.php">
               <img src="../../images/albumcover.png" alt="artistcover">
               <div>
                 Artist6
@@ -286,7 +286,7 @@
 
 
           <li>
-            <a href="../artist-log/artist-log.html">
+            <a href="../artist-log/artist-log.php">
               <img src="../../images/albumcover.png" alt="artistcover">
               <div>
                 Artist7

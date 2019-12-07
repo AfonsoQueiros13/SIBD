@@ -13,7 +13,7 @@
   $password = $_POST['password'];
   try {
     insertUser($username, $nick, $password);
-    header('Location: ../HTML_CSS/home/home.html');
+    header('Location: ../HTML_CSS/home/home.php');
     exit;
   } catch(Exception $e) {
     echo 'Exception -> ';

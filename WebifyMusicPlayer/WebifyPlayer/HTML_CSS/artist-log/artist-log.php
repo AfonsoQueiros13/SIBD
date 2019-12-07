@@ -19,8 +19,7 @@
       <img src="../../images/logo.png" alt="logo">
       <h1>Webify</h1>
       <div id="signup">
-        <a href="../register/register.html">Register</a>
-        <a href="../login/login.html">Login </a>
+        Profile Name
       </div>
 
   </header>
@@ -30,26 +29,27 @@
     <div id="sidebar-clone">
       <div id="iconmenu">
         <ul>
-          <li><i class="fa fa-home"></i><a href="../home/home.html">Home</a></li>
-          <li><i class="fa fa-search"></i><a href="../search/search.html">Search</a></li>
+          <li><i class="fa fa-home"></i><a href="../loggedin/loggedin.php">Home</a></li>
+          <li><i class="fa fa-search"></i><a href="../search-log/search-log.php">Search</a></li>
+          <li><i class="fa fa-music"></i><a href="../mysongs/mysongs.php">My Songs</a></li>
+          <li><i class="fa fa-archive"></i><a href="../playlists/playlists.php">Playlists</a></li>
+          <li><i class="fa fa-power-off"></i><a href="../home/home.php">Logout </a></li>
         </ul>
       </div>
     </div>
 
 
     <div id="content">
-
       <div id="coverart">
         <img src="../../images/albumcover.png" alt="artist_img">
         <div>Artist name</div>
       </div>
 
-        <ul>
-            <li>song1</li>
-            <li>song2</li>
-            <li>song3</li>
-        </ul>
-
+      <ul>
+        <li>song1</li>
+        <li>song2</li>
+        <li>song3</li>
+      </ul>
     </div>
 
 

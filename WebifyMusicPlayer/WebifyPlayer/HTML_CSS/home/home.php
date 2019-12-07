@@ -17,11 +17,10 @@
     <header>
         <img src="../../images/logo.png" alt="logo">
         <h1>Webify</h1>
-
-        <div id="signup">
-            <a href="../register/register.html">Register</a>
-            <a href="../login/login.html">Login</a>
-        </div>
+            <div id="signup">
+                <a href="../register/register.php">Register</a>
+                <a href="../login/login.php">Login</a>
+            </div>
 
     </header>
 
@@ -30,8 +29,8 @@
     <div id="iconmenu-clone">
         <div id="iconmenu">
             <ul>
-                <li><i class="fa fa-home"></i><a href="home.html">Home</a></li>
-                <li><i class="fa fa-search"></i><a href="../search/search.html">Search</a></li>
+                <li><i class="fa fa-home"></i><a href="home.php">Home</a></li>
+                <li><i class="fa fa-search"></i><a href="../search/search.php">Search</a></li>
             </ul>
         </div>
     </div>
@@ -46,7 +45,7 @@
 
 
                 <li>
-                    <a href="../artist-guest/artist-guest.html">
+                    <a href="../artist-guest/artist-guest.php">
                         <img src="../../images/albumcover.png" alt="artistcover">
                         <div>
                             Artist1
@@ -57,7 +56,7 @@
 
 
                 <li>
-                    <a href="../artist-guest/artist-guest.html">
+                    <a href="../artist-guest/artist-guest.php">
                         <img src="../../images/albumcover.png" alt="artistcover">
                         <div>
                             Artist2
@@ -68,7 +67,7 @@
 
 
                 <li>
-                    <a href="../artist-guest/artist-guest.html">
+                    <a href="../artist-guest/artist-guest.php">
                         <img src="../../images/albumcover.png" alt="artistcover">
                         <div>
                             Artist3
@@ -79,7 +78,7 @@
 
 
                 <li>
-                    <a href="../artist-guest/artist-guest.html">
+                    <a href="../artist-guest/artist-guest.php">
                         <img src="../../images/albumcover.png" alt="artistcover">
                         <div>
                             Artist4
@@ -90,7 +89,7 @@
 
 
                 <li>
-                    <a href="../artist-guest/artist-guest.html">
+                    <a href="../artist-guest/artist-guest.php">
                         <img src="../../images/albumcover.png" alt="artistcover">
                         <div>
                             Artist5
@@ -101,7 +100,7 @@
 
 
                 <li>
-                    <a href="../artist-guest/artist-guest.html">
+                    <a href="../artist-guest/artist-guest.php">
                         <img src="../../images/albumcover.png" alt="artistcover">
                         <div>
                             Artist6
@@ -112,7 +111,7 @@
 
 
                 <li>
-                    <a href="../artist-guest/artist-guest.html">
+                    <a href="../artist-guest/artist-guest.php">
                         <img src="../../images/albumcover.png" alt="artistcover">
                         <div>
                             Artist7
@@ -133,7 +132,7 @@
 
 
                 <li>
-                    <a href="../artist-guest/artist-guest.html">
+                    <a href="../artist-guest/artist-guest.php">
                         <img src="../../images/albumcover.png" alt="artistcover">
                         <div>
                             Artist1
@@ -144,7 +143,7 @@
 
 
                 <li>
-                    <a href="../artist-guest/artist-guest.html">
+                    <a href="../artist-guest/artist-guest.php">
                         <img src="../../images/albumcover.png" alt="artistcover">
                         <div>
                             Artist2
@@ -155,7 +154,7 @@
 
 
                 <li>
-                    <a href="../artist-guest/artist-guest.html">
+                    <a href="../artist-guest/artist-guest.php">
                         <img src="../../images/albumcover.png" alt="artistcover">
                         <div>
                             Artist3
@@ -166,7 +165,7 @@
 
 
                 <li>
-                    <a href="../artist-guest/artist-guest.html">
+                    <a href="../artist-guest/artist-guest.php">
                         <img src="../../images/albumcover.png" alt="artistcover">
                         <div>
                             Artist4
@@ -177,7 +176,7 @@
 
 
                 <li>
-                    <a href="../artist-guest/artist-guest.html">
+                    <a href="../artist-guest/artist-guest.php">
                         <img src="../../images/albumcover.png" alt="artistcover">
                         <div>
                             Artist5
@@ -188,7 +187,7 @@
 
 
                 <li>
-                    <a href="../artist-guest/artist-guest.html">
+                    <a href="../artist-guest/artist-guest.php">
                         <img src="../../images/albumcover.png" alt="artistcover">
                         <div>
                             Artist6
@@ -199,7 +198,7 @@
 
 
                 <li>
-                    <a href="../artist-guest/artist-guest.html">
+                    <a href="../artist-guest/artist-guest.php">
                         <img src="../../images/albumcover.png" alt="artistcover">
                         <div>
                             Artist7
@@ -218,7 +217,7 @@
 
 
                 <li>
-                    <a href="../artist-guest/artist-guest.html">
+                    <a href="../artist-guest/artist-guest.php">
                         <img src="../../images/albumcover.png" alt="artistcover">
                         <div>
                             Artist1
@@ -229,7 +228,7 @@
 
 
                 <li>
-                    <a href="../artist-guest/artist-guest.html">
+                    <a href="../artist-guest/artist-guest.php">
                         <img src="../../images/albumcover.png" alt="artistcover">
                         <div>
                             Artist2
@@ -240,7 +239,7 @@
 
 
                 <li>
-                    <a href="../artist-guest/artist-guest.html">
+                    <a href="../artist-guest/artist-guest.php">
                         <img src="../../images/albumcover.png" alt="artistcover">
                         <div>
                             Artist3
@@ -251,7 +250,7 @@
 
 
                 <li>
-                    <a href="../artist-guest/artist-guest.html">
+                    <a href="../artist-guest/artist-guest.php">
                         <img src="../../images/albumcover.png" alt="artistcover">
                         <div>
                             Artist4
@@ -262,7 +261,7 @@
 
 
                 <li>
-                    <a href="../artist-guest/artist-guest.html">
+                    <a href="../artist-guest/artist-guest.php">
                         <img src="../../images/albumcover.png" alt="artistcover">
                         <div>
                             Artist5
@@ -273,7 +272,7 @@
 
 
                 <li>
-                    <a href="../artist-guest/artist-guest.html">
+                    <a href="../artist-guest/artist-guest.php">
                         <img src="../../images/albumcover.png" alt="artistcover">
                         <div>
                             Artist6
@@ -284,7 +283,7 @@
 
 
                 <li>
-                    <a href="../artist-guest/artist-guest.html">
+                    <a href="../artist-guest/artist-guest.php">
                         <img src="../../images/albumcover.png" alt="artistcover">
                         <div>
                             Artist7
