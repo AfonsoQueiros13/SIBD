@@ -5,15 +5,15 @@
   error_reporting(E_ALL);
 
   /*REQUIRES TO RUN CORRECTY PHP SCRIPT*/
-  require_once('./config/init.php');
-  require_once('./user/user.php');
+  require_once('../config/init.php');
+  require_once('../tools/user.php');
   
   $username = $_POST['username'];
   $nick = $_POST['nick'];
   $password = $_POST['password'];
   try {
     insertUser($username, $nick, $password);
-    header('Location: ./home/home.html');
+    header('Location: ../HTML_CSS/home/home.html');
     exit;
   } catch(Exception $e) {
     echo 'Exception -> ';
