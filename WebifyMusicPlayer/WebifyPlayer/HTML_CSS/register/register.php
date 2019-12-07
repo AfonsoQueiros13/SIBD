@@ -37,9 +37,9 @@
     <!-- should have register form, sidebar to return to home and search,... -->
 
     <form action="../../php_actions/action_register.php" method="POST">
-        <input type="text" name="username" placeholder="username"> <br>
-        <input type="text" name="nick" placeholder="nickname"> <br>
-        <input type="text" name="password" placeholder="password"> <br>
+        <input type="text" name="email" placeholder="E-mail"><br>
+        <input type="text" name="nick" placeholder="Nickname"> <br>
+        <input type="text" name="password" placeholder="Password"> <br>
         <input type="submit" value="Register to Webify">
     </form>
 

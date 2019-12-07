@@ -6,15 +6,13 @@
 
   /*REQUIRES TO RUN CORRECTY PHP SCRIPT*/
   require_once('../config/init.php');
-  require_once('../tools/user.php');
+  require_once('../tools/db_queries_user.php');
   
-  $username = $_POST['username'];
+  $email = $_POST['email'];
   $nick = $_POST['nick'];
   $password = $_POST['password'];
   try {
-    insertUser($username, $nick, $password);
-    header('Location: ../HTML_CSS/home/home.php');
-    exit;
+    insertUser($email, $nick, $password);
   } catch(Exception $e) {
     echo 'Exception -> ';
     var_dump($e->getMessage());
