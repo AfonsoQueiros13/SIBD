@@ -40,7 +40,7 @@
 
         <article>
             <!-- artists -> songs or just songs? -->
-            <h2>Trending-Albums</h2>
+            <h2>Trending Albums</h2>
             <ul>
 
                 <?php
@@ -49,7 +49,7 @@
                 require_once('../../config/init.php');
                 require_once('../../tools/db_queries_album.php');
 
-                $all_albums = get_all_albums();
+                $all_albums = get_all_albums_from_trends();
 
                 $count = 1;
 
@@ -59,18 +59,16 @@
                     ?>
 
                     <li>
-                        <a href="../artist-guest/artist-guest.php">
+                        <a href="../artist-guest/artist-guest.php?id=<?= $album['id'] ?>">
                             <img src="<?= $album['img_path'] ?>" alt="artistcover">
                             <div>
-                                <?= $album['artist'] ?>
-
                                 <?= $album['name_album'] ?>
                             </div>
                         </a>
                     </li>
 
 
-                <? } ?>
+                <?php } ?>
 
 
 

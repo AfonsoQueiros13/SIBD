@@ -20,6 +20,7 @@ CREATE TABLE music (
   id integer PRIMARY KEY,
   id_album integer REFERENCES album,
   name_music varchar,
+  name_album varchar,
   autor varchar,
   duration integer
 );
@@ -90,27 +91,44 @@ insert into normal_user values (1, 'webify-admin@gmail.com','admin', 'admin');
 
 insert into profile values(1, 'admin', 'link', 1);
 
-insert into album values(1,'IGOR','Tyler, The Creator',12,'../../images/artists/tyler/tyler.jpeg');
+insert into album values(1,'IGOR','Tyler, The Creator',12,'../../images/artists/tyler/igor.jpeg');
 insert into album values(2,'Scorpion','Drake',1,'../../images/artists/drake/scorpion.jpg');
+insert into album values(3,'Flower Boy','Tyler, The Creator', 14, '../../images/artists/tyler/flowerboy.jpg');
 
+insert into music values(1,1,'IGORS THEME','IGOR' ,'Tyler, The Creator',201);
+insert into music values(2,1,'EARFQUAKE','IGOR','Tyler, The Creator',201);
+insert into music values(3,1,'I THINK','IGOR','Tyler, The Creator',201);
+insert into music values(4,1,'Exactly What You Run From You End Up Chasing','IGOR','Tyler, The Creator',201);
+insert into music values(5,1,'RUNNING OUT OF TIME','IGOR','Tyler, The Creator',201);
+insert into music values(6,1,'NEW MAGIC WAND','IGOR','Tyler, The Creator',201);
+insert into music values(7,1,'A BOY IS A GUN','IGOR','Tyler, The Creator',201);
+insert into music values(8,1,'Puppet','IGOR','Tyler, The Creator',201);
+insert into music values(9,1,'WHATS GOOD','IGOR','Tyler, The Creator',201);
+insert into music values(10,1,'GONE, GONE/ THANK YOU','IGOR','Tyler, The Creator',201);
+insert into music values(11,1,'I DONT LOVE YOU ANYMORE','IGOR','Tyler, The Creator',201);
+insert into music values(12,1,'ARE WE STILL FRIENDS','IGOR','Tyler, The Creator',201);
 
-insert into music values(1,1,'IGORS THEME','Tyler, The Creator',201);
-insert into music values(2,1,'EARFQUAKE','Tyler, The Creator',201);
-insert into music values(3,1,'I THINK','Tyler, The Creator',201);
-insert into music values(4,1,'Exactly What You Run From You End Up Chasing','Tyler, The Creator',201);
-insert into music values(5,1,'RUNNING OUT OF TIME','Tyler, The Creator',201);
-insert into music values(6,1,'NEW MAGIC WAND','Tyler, The Creator',201);
-insert into music values(7,1,'A BOY IS A GUN','Tyler, The Creator',201);
-insert into music values(8,1,'Puppet','Tyler, The Creator',201);
-insert into music values(9,1,'WHATS GOOD','Tyler, The Creator',201);
-insert into music values(10,1,'GONE, GONE/ THANK YOU','Tyler, The Creator',201);
-insert into music values(11,1,'I DONT LOVE YOU ANYMORE','Tyler, The Creator',201);
-insert into music values(12,1,'ARE WE STILL FRIENDS','Tyler, The Creator',201);
+insert into music values(17,3,'Foreword','Flower Boy','Tyler, The Creator',201);
+insert into music values(18,3,'Where This Flower Blooms','Flower Boy','Tyler, The Creator',201);
+insert into music values(19,3,'Sometimes...','Flower Boy','Tyler, The Creator',201);
+insert into music values(20,3,'See You Again','Flower Boy','Tyler, The Creator',201);
+insert into music values(21,3,'Who Dat Boy','Flower Boy','Tyler, The Creator',201);
+insert into music values(22,3,'Pothole','Flower Boy','Tyler, The Creator',201);
+insert into music values(23,3,'Garden Shed','Flower Boy','Tyler, The Creator',201);
+insert into music values(24,3,'Boredom','Flower Boy','Tyler, The Creator',201);
+insert into music values(25,3,'I Aint Got Time','Flower Boy','Tyler, The Creator',201);
+insert into music values(26,3,'911/Mr Lonely','Flower Boy','Tyler, The Creator',201);
+insert into music values(27,3,'Droppin Seeds','Flower Boy','Tyler, The Creator',201);
+insert into music values(28,3,'November','Flower Boy','Tyler, The Creator',201);
+insert into music values(29,3,'Glitter','Flower Boy','Tyler, The Creator',201);
+insert into music values(30,3,'Enjoy Right Now, Today','Flower Boy','Tyler, The Creator',201);
 
-insert into music values(13,2,'Jaded','Tyler, The Creator',201);
-insert into music values(14,2,'Finance','Tyler, The Creator',201);
-insert into music values(15,2,'Peak','Tyler, The Creator',201);
-insert into music values(16,2,'Mob Ties','Tyler, The Creator',201);
+insert into music values(13,2,'Jaded','Scorpion','Drake',201);
+insert into music values(14,2,'Finance','Scorpion','Drake',201);
+insert into music values(15,2,'Peak','Scorpion','Drake',201);
+insert into music values(16,2,'Mob Ties','Scorpion','Drake',201);
+insert into music values(31,2,'Survival','Scorpion','Drake',201);
+insert into music values(32,2,'Nonstop','Scorpion','Drake',201);
 
 insert into trends values(1);
 insert into trends values(2);
