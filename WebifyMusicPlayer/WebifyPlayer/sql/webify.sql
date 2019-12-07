@@ -18,10 +18,19 @@ CREATE TABLE profile (
 --music table--
 CREATE TABLE music (
   id integer PRIMARY KEY,
+  id_album integer REFERENCES album,
   name_music varchar,
   autor varchar,
-  album varchar,
   duration integer
+);
+
+--album table--
+CREATE TABLE album(
+  id integer PRIMARY KEY,
+  name_album varchar,
+  artist varchar,
+  number_songs integer,
+  img_path varchar
 );
 
 --playlist table--
@@ -39,6 +48,12 @@ CREATE TABLE genre (id integer PRIMARY KEY, name varchar);
 CREATE TABLE liked_musics (
   id_user INTEGER references normal_user,
   id_music INTEGER references music
+);
+
+--liked albums table--
+CREATE TABLE liked_albums(
+  id_user INTEGER references normal_user,
+  id_album INTEGER references album
 );
 
 --playlist table--
@@ -71,13 +86,21 @@ CREATE TABLE playlists_trends_by_genre (
   id_genre INTEGER references genre
 );
 
-insert into normal_user values (1, 'abcd@gmail.com','welelel', '1324');
-insert into normal_user values (2, 'odiad@gmail.com','f123', 'asdf');
-insert into normal_user values (3, 'aasdfd@gmail.com','conaca', '1gh4');
-insert into normal_user values (4, 'ioijcd@gmail.com','bambora', '13sdfgsdfg4');
+insert into normal_user values (1, 'webify-admin@gmail.com','admin', 'admin');
 
-insert into music values (100,'ye','kanye','aosd', 120);
-insert into music values (101,'earfquake','tyler','igor', 120);
+insert into profile values(1, 'admin', 'link', 1);
 
-insert into profile values(1, 'Bruno', 'link', 1);
-insert into profile values(2, 'bbbb', 'links', 2);
+insert into album values(1,'IGOR','Tyler, The Creator',12,'../../images/artists/tyler/tyler.jpeg');
+
+insert into music values(1,1,'IGORS THEME','Tyler, The Creator',201);
+insert into music values(2,1,'EARFQUAKE','Tyler, The Creator',201);
+insert into music values(3,1,'I THINK','Tyler, The Creator',201);
+insert into music values(4,1,'Exactly What You Run From You End Up Chasing','Tyler, The Creator',201);
+insert into music values(5,1,'RUNNING OUT OF TIME','Tyler, The Creator',201);
+insert into music values(6,1,'NEW MAGIC WAND','Tyler, The Creator',201);
+insert into music values(7,1,'A BOY IS A GUN','Tyler, The Creator',201);
+insert into music values(8,1,'Puppet','Tyler, The Creator',201);
+insert into music values(9,1,'WHATS GOOD','Tyler, The Creator',201);
+insert into music values(10,1,'GONE, GONE/ THANK YOU','Tyler, The Creator',201);
+insert into music values(11,1,'I DONT LOVE YOU ANYMORE','Tyler, The Creator',201);
+insert into music values(12,1,'ARE WE STILL FRIENDS','Tyler, The Creator',201);
