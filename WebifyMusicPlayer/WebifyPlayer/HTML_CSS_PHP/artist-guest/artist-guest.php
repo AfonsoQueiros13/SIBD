@@ -40,14 +40,27 @@
     <div id="content">
 
       <div id="coverart">
-        <img src="../../images/albumcover.png" alt="artist_img">
-        <div>Artist name</div>
+        <?php
+        ini_set('display_errors', 1);
+        ini_set('display_startup_errors', 1);
+        require_once('../../config/init.php');
+        require_once('../../tools/db_queries_album.php');
+
+        $ID=$_GET['id'];
+
+        $album=get_album_by_id($ID);
+        $songs=get_songs_in_album($album['name_album'],$ID);
+        ?>
+        <img src="<?= $album['img_path'] ?>" alt="artist_img">
+        <div><?= $album['artist'] ?></div>
       </div>
 
         <ul>
-            <li>song1</li>
-            <li>song2</li>
-            <li>song3</li>
+
+        <?php  foreach ($songs as $song_name) { ?>
+            <li> <?= $song_name['name_music'] ?> </li>
+        <?php } ?>
+
         </ul>
 
     </div>

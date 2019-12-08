@@ -5,7 +5,7 @@ error_reporting(E_ALL);
 
 /*REQUIRES TO RUN CORRECTY PHP SCRIPT*/
 
-function get_all_albums(){
+function get_all_albums_from_trends(){
   global $dbh;
   $stmt=$dbh->prepare('SELECT * FROM trends join album where id=id_album');
   $stmt->execute();
@@ -17,6 +17,13 @@ function get_album_by_id($id){
   $stmt=$dbh->prepare('SELECT * FROM album where id= ?');
   $stmt->execute(array($id));
   return $stmt->fetch();
+}
+
+function get_songs_in_album($name,$albumid){
+  global $dbh;
+  $stmt=$dbh->prepare('SELECT * FROM album join music where album.name_album= ? and  id_album= ?');
+  $stmt->execute(array($name,$albumid));
+  return $stmt->fetchAll();
 }
 
  ?>

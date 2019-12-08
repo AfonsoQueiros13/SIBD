@@ -4,7 +4,7 @@
 function insertUser($email, $nick, $password)
 {
   global $dbh;
-  $query = "SELECT * FROM normal_user WHERE email='".$email."'";
+  $query = "SELECT * FROM normal_user WHERE email='".$email."' OR nick_name = '".$nick."'";
   $stmt = $dbh->prepare($query);
   $stmt->execute();
   $count=$stmt->fetchColumn();
@@ -18,7 +18,7 @@ function insertUser($email, $nick, $password)
   else //ERROR INSERTING IN DB -> ALREADY EXISTS THIS E-MAIL
   { 
     //echo ("<script>alert('E-mail already exists!.');</script>");
-    echo ("<script>alert('E-mail already exists!');setTimeout(\"location.href = '../register/register.php';\",100);</script>");
+    echo ("<script>alert('E-mail or Username already exists!');setTimeout(\"location.href = '../register/register.php';\",100);</script>");
     //header('Location: ../HTML_CSS/register/register.php');
 
   }
