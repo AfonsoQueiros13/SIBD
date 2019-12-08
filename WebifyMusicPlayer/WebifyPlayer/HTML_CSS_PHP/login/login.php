@@ -33,8 +33,8 @@
     </div>
 
     <!-- <div id="signin"> -->
-    <form action="../loggedin/loggedin.php" method="post">
-        <input type="text" name="username" placeholder="username"> <br>
+    <form action="../php_actions/action_login.php" method="post">
+        <input type="text" name="email" placeholder="email"> <br>
         <input type="text" name="password" placeholder="password"> <br>
         <input type="submit" value="Log in">
     </form>

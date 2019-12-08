@@ -25,12 +25,12 @@ function insertUser($email, $nick, $password)
 }
 
 /*SELECT USER IN DATABASE FOR LOGIN*/
-function selectUser($username,$password)
+function selectUser($email,$password)
 {
   global $dbh;
-  $query = "SELECT * FROM normal_user WHERE username = ? AND passwd = ?";
+  $query = "SELECT * FROM normal_user WHERE email = ? AND passwd = ?";
   $stmt= $dbh->prepare($query);
-  $stmt->execute(array($username,$password));
+  $stmt->execute(array($email,sha1($password)));
   return $stmt->fetchAll(); // DESIRED VALUES RETURNED FROM DB
 }
 
