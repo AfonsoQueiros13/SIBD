@@ -117,7 +117,7 @@ insert into music values(12,1,'ARE WE STILL FRIENDS','IGOR','Tyler, The Creator'
 
 /*SCORPION;DRAKE*/
 insert into music values(13,2,'Jaded','Scorpion','Drake',201);
-insert into music values(14,2,'Finance','Scorpion','Drake',201);
+insert into music values(14,2,'Finesse','Scorpion','Drake',201);
 insert into music values(15,2,'Peak','Scorpion','Drake',201);
 insert into music values(16,2,'Mob Ties','Scorpion','Drake',201);
 insert into music values(31,2,'Survival','Scorpion','Drake',201);
