@@ -21,7 +21,7 @@ function get_album_by_id($id){
 
 function get_songs_in_album($name,$albumid){
   global $dbh;
-  $stmt=$dbh->prepare('SELECT * FROM album join music where album.name_album= ? and  id_album= ?');
+  $stmt=$dbh->prepare('SELECT * FROM album join music where album.nome_album= ? and  id_album= ?');
   $stmt->execute(array($name,$albumid));
   return $stmt->fetchAll();
 }

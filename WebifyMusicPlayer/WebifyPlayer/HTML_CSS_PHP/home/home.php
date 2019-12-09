@@ -43,7 +43,6 @@
             <!-- artists -> songs or just songs? -->
             <h2>Trending Albums</h2>
             <ul>
-
                 <?php
                 ini_set('display_errors', 1);
                 ini_set('display_startup_errors', 1);
@@ -63,7 +62,7 @@
                         <a href="../artist-guest/artist-guest.php?id=<?= $album['id'] ?>">
                             <img src="<?= $album['img_path'] ?>" alt="artistcover">
                             <div>
-                                <?= $album['name_album'] ?>
+                                <?= $album['nome_album'] ?>
                             </div>
                         </a>
                     </li>

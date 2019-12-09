@@ -28,7 +28,7 @@ CREATE TABLE music (
 --album table--
 CREATE TABLE album(
   id integer PRIMARY KEY,
-  name_album varchar,
+  nome_album varchar,
   artist varchar,
   number_songs integer,
   img_path varchar

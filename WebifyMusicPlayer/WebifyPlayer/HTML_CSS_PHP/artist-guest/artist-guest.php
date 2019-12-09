@@ -50,7 +50,7 @@
         $ID=$_GET['id'];
 
         $album=get_album_by_id($ID);
-        $songs=get_songs_in_album($album['name_album'],$ID);
+        $songs=get_songs_in_album($album['nome_album'],$ID);
         ?>
         <img src="<?= $album['img_path'] ?>" alt="artist_img">
         <div><?= $album['artist'] ?></div>

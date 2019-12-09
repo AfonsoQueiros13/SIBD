@@ -4,10 +4,12 @@
 function insertUser($email, $nick, $password)
 {
   global $dbh;
-  $query = "SELECT * FROM normal_user WHERE email='".$email."' OR nick_name = '".$nick."'";
+  $query = "SELECT * FROM normal_user WHERE email= ? OR nick_name = ? ";
   $stmt = $dbh->prepare($query);
-  $stmt->execute();
+  $stmt->execute(array($email,$nick));
   $count=$stmt->fetchColumn();
+
+  
   
   if ($count == 0) { //NO ENTRANCE FOR THIS E-MAIL IN DATABASE
       $query = 'INSERT INTO normal_user VALUES(?,?,?,?)';
