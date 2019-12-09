@@ -2,6 +2,7 @@
 <html lang="en-US">
   <head>
     <title> Webify </title>
+    <link rel="icon" type="image/gif/png" href="../../images/logo.png">
     <meta charset="UTF-8">
     <link href="style.css" rel=stylesheet>
     <link href="layout.css" rel=stylesheet>

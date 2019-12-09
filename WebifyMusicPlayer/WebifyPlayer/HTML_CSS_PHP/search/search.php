@@ -3,6 +3,7 @@
 
   <head>
     <title>Webify</title>
+    <link rel="icon" type="image/gif/png" href="../../images/logo.png">
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="layout.css">
