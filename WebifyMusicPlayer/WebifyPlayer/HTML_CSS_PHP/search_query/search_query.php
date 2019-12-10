@@ -59,17 +59,28 @@
       require_once('../../tools/db_queries_album.php');
 
       $search = $_POST['searchquery'];
-      $query=searchForArtist($search);
+      $all_artists = searchForArtist($search);
+      
+      $count = 0;
+      foreach ($all_artists as $artist) {
+        $artist = $all_artists['name'];
+        ?>
+        <li>
+          <a href="../artist-guest/artist-guest.php?id=<?= $artist[''] ?>">
+            <img src="<?= $path[$count]['img_path'] ?>" alt="artistcover">
+            <div>
+              <?= $artist ?>
+            </div>
+          </a>
+        </li>
+
+
+      <?php
+        $count++;
+      }
       ?>
-
-      <?=$query['name']?>
-
     </div>
-
-
-
-
-
+     
 
     <h3>Albums</h3>
     <div id="albums">
@@ -87,29 +98,29 @@
       $search = $_POST['searchquery'];
 
       $all_albums = searchForAlbum($search);
-      $path=get_album_image($search);
+      $path = get_album_image($search);
 
-      $count=0;
+      $count = 0;
       foreach ($all_albums as $album) {
 
         //$album = get_album_by_id($all_albums[$count++]['nome_album']);
-        $album=$all_albums[$count]['nome_album'];
+        $album = $all_albums[$count]['nome_album'];
         ?>
 
         <li>
-            <a href="../artist-guest/artist-guest.php?id=<?= $album['id'] ?>">
-                <img src="<?= $path[$count]['img_path'] ?>" alt="artistcover">
-                <div>
-                    <?= $album ?>
-                </div>
-            </a>
+          <a href="../artist-guest/artist-guest.php?id=<?= $album['id'] ?>">
+            <img src="<?= $path[$count]['img_path'] ?>" alt="artistcover">
+            <div>
+              <?= $album ?>
+            </div>
+          </a>
         </li>
 
 
-    <?php
-    $count++;
-   }
-    ?>
+      <?php
+        $count++;
+      }
+      ?>
     </div>
 
 
@@ -130,72 +141,72 @@
 
       $search = $_POST['searchquery'];
 
-      $all_albums = searchForMusic($search);
+      $all_musics = searchForMusic($search);
 
 
-      $count=0;
-      foreach ($all_albums as $album) {
+      $count = 0;
+      foreach ($all_albums as $music) {
 
         //$album = get_album_by_id($all_albums[$count++]['nome_album']);
-        $album=$all_albums[$count]['name_music'];
+        $music = $all_musics[$count]['name_music'];
         ?>
 
         <li>
-            <a href="../artist-guest/artist-guest.php?id=<?= $album['id'] ?>">
+          <a href="../artist-guest/artist-guest.php?id=<?= $music['id'] ?>">
 
-                <div>
-                    <?= $album ?>
-                </div>
-            </a>
+            <div>
+              <?= $music ?>
+            </div>
+          </a>
         </li>
 
 
-    <?php
-    $count++;
-   }
-    ?>
+      <?php
+        $count++;
+      }
+      ?>
     </div>
 
     <h4>Genres</h4>
-      <div id="genres">
-        <?php
-        /*DISPLAY ERRORS*/
-        ini_set('display_errors', 1);
-        ini_set('display_startup_errors', 1);
-        error_reporting(E_ALL);
+    <div id="genres">
+      <?php
+      /*DISPLAY ERRORS*/
+      ini_set('display_errors', 1);
+      ini_set('display_startup_errors', 1);
+      error_reporting(E_ALL);
 
-        /*REQUIRES TO RUN CORRECTY PHP SCRIPT*/
-        require_once('../../config/init.php');
-        require_once('../../tools/db_queries_search.php');
-        require_once('../../tools/db_queries_album.php');
+      /*REQUIRES TO RUN CORRECTY PHP SCRIPT*/
+      require_once('../../config/init.php');
+      require_once('../../tools/db_queries_search.php');
+      require_once('../../tools/db_queries_album.php');
 
-        $search = $_POST['searchquery'];
+      $search = $_POST['searchquery'];
 
-        $genre = searchForGenre($search);
+      $allgenre = searchForGenre($search);
 
 
-        $count=0;
-        foreach ($genre as $album) {
+      $count = 0;
+      foreach ($allgenre as $genre) {
 
-          //$album = get_album_by_id($all_albums[$count++]['nome_album']);
-          $album=$genre[$count]['gen_name'];
-          ?>
+        //$album = get_album_by_id($all_albums[$count++]['nome_album']);
+        $genre = $allgenre[$count]['gen_name'];
+        ?>
 
-          <li>
-              <a href="../artist-guest/artist-guest.php?id=<?= $album['id'] ?>">
+        <li>
+          <a href="../artist-guest/artist-guest.php?id=<?= $genre['id'] ?>">
 
-                  <div>
-                      <?= $album ?>
-                  </div>
-              </a>
-          </li>
+            <div>
+              <?= $genre ?>
+            </div>
+          </a>
+        </li>
 
 
       <?php
-      $count++;
-     }
+        $count++;
+      }
       ?>
-      </div>
+    </div>
 
   </div>
 
