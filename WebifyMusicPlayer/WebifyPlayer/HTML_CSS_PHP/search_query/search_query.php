@@ -155,49 +155,52 @@
    }
     ?>
     </div>
-  </div>
 
-  <h4>Genres</h4>
-    <div id="genres">
+    <h4>Genres</h4>
+      <div id="genres">
+        <?php
+        /*DISPLAY ERRORS*/
+        ini_set('display_errors', 1);
+        ini_set('display_startup_errors', 1);
+        error_reporting(E_ALL);
+
+        /*REQUIRES TO RUN CORRECTY PHP SCRIPT*/
+        require_once('../../config/init.php');
+        require_once('../../tools/db_queries_search.php');
+        require_once('../../tools/db_queries_album.php');
+
+        $search = $_POST['searchquery'];
+
+        $genre = searchForGenre($search);
+
+
+        $count=0;
+        foreach ($genre as $album) {
+
+          //$album = get_album_by_id($all_albums[$count++]['nome_album']);
+          $album=$genre[$count]['gen_name'];
+          ?>
+
+          <li>
+              <a href="../artist-guest/artist-guest.php?id=<?= $album['id'] ?>">
+
+                  <div>
+                      <?= $album ?>
+                  </div>
+              </a>
+          </li>
+
+
       <?php
-      /*DISPLAY ERRORS*/
-      ini_set('display_errors', 1);
-      ini_set('display_startup_errors', 1);
-      error_reporting(E_ALL);
+      $count++;
+     }
+      ?>
+      </div>
 
-      /*REQUIRES TO RUN CORRECTY PHP SCRIPT*/
-      require_once('../../config/init.php');
-      require_once('../../tools/db_queries_search.php');
-      require_once('../../tools/db_queries_album.php');
-
-      $search = $_POST['searchquery'];
-
-      $genre = searchForGenre($search);
-
-
-      $count=0;
-      foreach ($genre as $album) {
-
-        //$album = get_album_by_id($all_albums[$count++]['nome_album']);
-        $album=$genre[$count]['gen_name'];
-        ?>
-
-        <li>
-            <a href="../artist-guest/artist-guest.php?id=<?= $album['id'] ?>">
-
-                <div>
-                    <?= $album ?>
-                </div>
-            </a>
-        </li>
-
-
-    <?php
-    $count++;
-   }
-    ?>
-    </div>
   </div>
+
+
+
 
 
 </body>
