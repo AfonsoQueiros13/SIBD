@@ -52,10 +52,9 @@
         $album=get_album_by_id($ID);
         $songs=get_songs_in_album($album['nome_album'],$ID);
         $info=get_album_and_artist_info($ID);
-
         ?>
         <img src="<?= $album['img_path'] ?>" alt="artist_img">
-        <div>  <?=$info['name'] ?>    </div>
+        <div> <a href="../selected_artist-guestmode/selected_artist.php?id=<?= $ID ?>">  <?=$info['name'] ?>  </a>   </div>
       </div>
 
         <ul>

@@ -55,7 +55,7 @@ CREATE TABLE playlist (
 
 --genre table --
 CREATE TABLE genre (
-  id integer PRIMARY KEY, 
+  id integer PRIMARY KEY,
   gen_name varchar
 );
 
@@ -226,4 +226,3 @@ insert into trends values(4);
 insert into trends values(5);
 insert into trends values(6);
 insert into trends values(7);
-    $query = "SELECT distinct gen_name from genre join album join music join artist on genre.id=album.id_genre and genre.id=music.id_genre and genre.id=artist.id_genre and album.id_genre=music.id_genre and album.id_genre=artist.id_genre and artist.id_genre=music.id_genre where artist.name=? or nome_album=? or name_music=? or gen_name = ?";
