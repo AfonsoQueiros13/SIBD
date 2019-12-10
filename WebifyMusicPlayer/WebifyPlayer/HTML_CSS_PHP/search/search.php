@@ -46,7 +46,7 @@
   <div id="initialtext">
 
     <h2>Search for anything</h2>
-    <h3>artists, albums, songs,...</h3>
+    <h3>artists, albums, songs, genres,...</h3>
   </div>
 
 

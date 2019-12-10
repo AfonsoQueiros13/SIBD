@@ -36,3 +36,12 @@ function searchForMusic($search){
   $stmt->execute(array($search,$search,$search));
   return $stmt->fetchAll();
   }
+
+
+  function searchForGenre($search){
+    global $dbh;
+    $query = "SELECT distinct gen_name from genre join album join music join artist on genre.id=album.id_genre and genre.id=music.id_genre and genre.id=artist.id_genre and album.id_genre=music.id_genre and album.id_genre=artist.id_genre and artist.id_genre=music.id_genre where artist.name=? or album.nome_album=? or music.name_music=? or genre.gen_name = ?";
+    $stmt=$dbh->prepare($query);
+    $stmt->execute(array($search,$search,$search,$search));
+    return $stmt->fetchAll();
+    } 
