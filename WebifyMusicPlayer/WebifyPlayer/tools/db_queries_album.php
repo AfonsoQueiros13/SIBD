@@ -18,12 +18,19 @@ function get_album_by_id($id){
   $stmt->execute(array($id));
   return $stmt->fetch();
 }
-
+//select * from album join artist where album.id_artist=artist.id
 function get_songs_in_album($name,$albumid){
   global $dbh;
   $stmt=$dbh->prepare('SELECT * FROM album join music where album.nome_album= ? and  id_album= ?');
   $stmt->execute(array($name,$albumid));
   return $stmt->fetchAll();
+}
+
+function get_album_and_artist_info($id){
+  global $dbh;
+  $stmt=$dbh->prepare('SELECT * from album join artist where album.id_artist=artist.id and album.id= ?');
+  $stmt->execute(array($id));
+  return $stmt->fetch();
 }
 
  ?>

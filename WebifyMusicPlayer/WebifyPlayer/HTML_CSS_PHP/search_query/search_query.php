@@ -47,8 +47,29 @@
 
     <h2>Artists</h2>
     <div id="artists">
-      test-artists
+      <?php
+      /*DISPLAY ERRORS*/
+      ini_set('display_errors', 1);
+      ini_set('display_startup_errors', 1);
+      error_reporting(E_ALL);
+
+      /*REQUIRES TO RUN CORRECTY PHP SCRIPT*/
+      require_once('../../config/init.php');
+      require_once('../../tools/db_queries_search.php');
+      require_once('../../tools/db_queries_album.php');
+
+      $search = $_POST['searchquery'];
+      $query=searchForArtist($search);
+      ?>
+
+      <?=$query['name']?>
+
     </div>
+
+
+
+
+
 
     <h3>Albums</h3>
     <div id="albums">
@@ -62,10 +83,10 @@
       require_once('../../config/init.php');
       require_once('../../tools/db_queries_search.php');
       require_once('../../tools/db_queries_album.php');
-      
+
       $search = $_POST['searchquery'];
 
-      $all_albums = searchForAlbum($search);  
+      $all_albums = searchForAlbum($search);
       $count=0;
       foreach ($all_albums as $album) {
 

@@ -35,9 +35,9 @@ name varchar
 CREATE TABLE album(
   id integer PRIMARY KEY,
   nome_album varchar,
+  id_artist integer references artist,
   number_songs integer,
-  img_path varchar,
-  id_artist integer references artist
+  img_path varchar
 );
 
 --playlist table--
@@ -104,13 +104,13 @@ insert into artist values(4,'Da Steez Brothaz');
 insert into artist values(5,'AZ');
 insert into artist values(6,'Damian Marley');
 
-insert into album values(1,'IGOR','Tyler, The Creator',12,'../../images/artists/tyler/igor/igor.jpeg');
-insert into album values(2,'Scorpion','Drake',6,'../../images/artists/drake/scorpion/scorpion.jpg');
-insert into album values(3,'Flower Boy','Tyler, The Creator', 14, '../../images/artists/tyler/flowerboy/flowerboy.jpg');
-insert into album values(4,'Illmatic','Nas',6, '../../images/artists/nas/illmatic/illmatic.jpeg');
-insert into album values(5,'Physical Rappin','Da Steez Brothaz',6, '../../images/artists/steez_brothaz/physical_rappin/physical_rappin.jpeg');
-insert into album values(6,'Doe or Die','AZ',6, '../../images/artists/az/doe_or_die/doe_or_die.jpeg');
-insert into album values(7,'Distant Relatives','Damian Marley',6, '../../images/artists/damian_marley/distant_relatives/distant_relatives.jpeg');
+insert into album values(1,'IGOR',1,12,'../../images/artists/tyler/igor/igor.jpeg');
+insert into album values(2,'Scorpion',2,6,'../../images/artists/drake/scorpion/scorpion.jpg');
+insert into album values(3,'Flower Boy',1, 14, '../../images/artists/tyler/flowerboy/flowerboy.jpg');
+insert into album values(4,'Illmatic',3,6, '../../images/artists/nas/illmatic/illmatic.jpeg');
+insert into album values(5,'Physical Rappin',4,6, '../../images/artists/steez_brothaz/physical_rappin/physical_rappin.jpeg');
+insert into album values(6,'Doe or Die',5,6, '../../images/artists/az/doe_or_die/doe_or_die.jpeg');
+insert into album values(7,'Distant Relatives',6,6, '../../images/artists/damian_marley/distant_relatives/distant_relatives.jpeg');
 
 
 /*IGOR;TYLER*/
