@@ -59,37 +59,28 @@
       require_once('../../tools/db_queries_album.php');
 
       $search = $_POST['searchquery'];
-      $query=searchForArtist($search);
-      $ID=get_id_by_name($query['name']);
-
-
       $all_artists = searchForArtist($search);
-
-    
-
-      $count=0;
+      
+      $count = 0;
       foreach ($all_artists as $artist) {
-
-
+        $artist = $all_artists[$count]['name'];
         ?>
         <li>
-
+          <a href="../artist-guest/artist-guest.php?id=<?= $artist['name'] ?>">
+            <img src="<?= $path[$count]['img_path'] ?>" alt="artistcover">
             <div>
-              <?= $artist['name'] ?>
+              <?= $artist ?>
             </div>
           </a>
         </li>
 
 
       <?php
-
+        $count++;
       }
       ?>
-
-
-
     </div>
-
+     
 
     <h3>Albums</h3>
     <div id="albums">
@@ -199,7 +190,6 @@
 
         //$album = get_album_by_id($all_albums[$count++]['nome_album']);
         $genre = $allgenre[$count]['gen_name'];
-
         ?>
 
         <li>
@@ -217,6 +207,16 @@
       }
       ?>
     </div>
+
+  </div>
+
+
+
+
+
+</body>
+
+</html>iv>
 
   </div>
 
