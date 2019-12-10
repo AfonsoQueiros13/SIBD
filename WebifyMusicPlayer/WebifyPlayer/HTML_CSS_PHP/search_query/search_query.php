@@ -87,61 +87,76 @@
       $search = $_POST['searchquery'];
 
       $all_albums = searchForAlbum($search);
+      $path=get_album_image($search);
+
       $count=0;
       foreach ($all_albums as $album) {
 
-        $album = get_album_by_id($all_albums[$count++]['id_album']);
+        //$album = get_album_by_id($all_albums[$count++]['nome_album']);
+        $album=$all_albums[$count]['nome_album'];
         ?>
 
         <li>
             <a href="../artist-guest/artist-guest.php?id=<?= $album['id'] ?>">
-                <img src="<?= $album['img_path'] ?>" alt="artistcover">
+                <img src="<?= $path[$count]['img_path'] ?>" alt="artistcover">
                 <div>
-                    <?= $album['nome_album'] ?>
+                    <?= $album ?>
                 </div>
             </a>
         </li>
 
 
-    <?php } ?>
-
-
-
-
-
-
-
-
+    <?php
+    $count++;
+   }
+    ?>
     </div>
+
+
+
 
     <h4>Songs</h4>
     <div id="songs">
-      test-songs
+      <?php
+      /*DISPLAY ERRORS*/
+      ini_set('display_errors', 1);
+      ini_set('display_startup_errors', 1);
+      error_reporting(E_ALL);
+
+      /*REQUIRES TO RUN CORRECTY PHP SCRIPT*/
+      require_once('../../config/init.php');
+      require_once('../../tools/db_queries_search.php');
+      require_once('../../tools/db_queries_album.php');
+
+      $search = $_POST['searchquery'];
+
+      $all_albums = searchForMusic($search);
+
+
+      $count=0;
+      foreach ($all_albums as $album) {
+
+        //$album = get_album_by_id($all_albums[$count++]['nome_album']);
+        $album=$all_albums[$count]['name_music'];
+        ?>
+
+        <li>
+            <a href="../artist-guest/artist-guest.php?id=<?= $album['id'] ?>">
+
+                <div>
+                    <?= $album ?>
+                </div>
+            </a>
+        </li>
+
+
+    <?php
+    $count++;
+   }
+    ?>
     </div>
   </div>
 
-  <?php
-  /*DISPLAY ERRORS*/
-  ini_set('display_errors', 1);
-  ini_set('display_startup_errors', 1);
-  error_reporting(E_ALL);
-
-  /*REQUIRES TO RUN CORRECTY PHP SCRIPT*/
-  require_once('../../config/init.php');
-  require_once('../../tools/db_queries_search.php');
-  $search = $_POST['searchquery'];
-  try {
-    $result_artist = searchForArtist($search);
-    $result_album_id = searchForAlbum($search);
-    $result_music = searchForMusic($search);
-    echo ($result_artist[0]['autor']);
-    echo ($album_id = $result_album_id[0]['id_album']);
-    echo ($result_music);
-  } catch (Exception $e) {
-    echo 'Exception -> ';
-    var_dump($e->getMessage());
-  }
-  ?>
 
 </body>
 
