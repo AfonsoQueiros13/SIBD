@@ -20,7 +20,8 @@
     <img src="../../images/logo.png" alt="logo">
     <h1>Webify</h1>
     <div id="signup">
-      Profile Name
+    <?php $id = $_GET['nickname'];
+         echo($id);?> 
     </div>
 
   </header>
