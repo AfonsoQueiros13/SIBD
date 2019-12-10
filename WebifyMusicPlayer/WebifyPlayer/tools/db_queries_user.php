@@ -36,4 +36,12 @@ function selectUser($email,$password)
   return $stmt->fetchAll(); // DESIRED VALUES RETURNED FROM DB
 }
 
+function selectUserNick($email)
+{
+  global $dbh;
+  $query = "SELECT nick_name FROM normal_user WHERE email = ?";
+  $stmt= $dbh->prepare($query);
+  $stmt->execute(array($email));
+  return $stmt->fetchAll(); // DESIRED VALUES RETURNED FROM DB
+}
 ?>
