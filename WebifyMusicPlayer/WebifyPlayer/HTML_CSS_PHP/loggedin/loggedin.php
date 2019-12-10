@@ -65,7 +65,7 @@
                     ?>
 
                     <li>
-                        <a href="../artist-guest/artist-guest.php?id=<?= $album['id'] ?>">
+                        <a href="../artist-log/artist-log.php?id=<?= $album['id'] ?>">
                             <img src="<?= $album['img_path'] ?>" alt="artistcover">
                             <div>
                                 <?= $album['nome_album'] ?>
