@@ -20,16 +20,16 @@
     <img src="../../images/logo.png" alt="logo">
     <h1>Webify</h1>
     <div id="signup">
-      <a href="../register/register.html">Register</a>
-      <a href="../login/login.html">Login </a>
+      <a href="../register/register.php">Register</a>
+      <a href="../login/login.php">Login </a>
     </div>
   </header>
 
   <div id="sidebar-clone">
     <div id="sidebar">
       <ul>
-        <li><i class="fa fa-home"></i><a href="../home/home.html">Home</a></li>
-        <li><i class="fa fa-search"></i><a href="../search/search.html">Search</a></li>
+        <li><i class="fa fa-home"></i><a href="../home/home.php">Home</a></li>
+        <li><i class="fa fa-search"></i><a href="../search/search.php">Search</a></li>
       </ul>
     </div>
   </div>
@@ -138,6 +138,48 @@
 
         //$album = get_album_by_id($all_albums[$count++]['nome_album']);
         $album=$all_albums[$count]['name_music'];
+        ?>
+
+        <li>
+            <a href="../artist-guest/artist-guest.php?id=<?= $album['id'] ?>">
+
+                <div>
+                    <?= $album ?>
+                </div>
+            </a>
+        </li>
+
+
+    <?php
+    $count++;
+   }
+    ?>
+    </div>
+  </div>
+
+  <h4>Genres</h4>
+    <div id="genres">
+      <?php
+      /*DISPLAY ERRORS*/
+      ini_set('display_errors', 1);
+      ini_set('display_startup_errors', 1);
+      error_reporting(E_ALL);
+
+      /*REQUIRES TO RUN CORRECTY PHP SCRIPT*/
+      require_once('../../config/init.php');
+      require_once('../../tools/db_queries_search.php');
+      require_once('../../tools/db_queries_album.php');
+
+      $search = $_POST['searchquery'];
+
+      $genre = searchForGenre($search);
+
+
+      $count=0;
+      foreach ($genre as $album) {
+
+        //$album = get_album_by_id($all_albums[$count++]['nome_album']);
+        $album=$genre[$count]['gen_name'];
         ?>
 
         <li>
