@@ -10,7 +10,7 @@ function searchForArtist($search){
   $query = "SELECT distinct name from artist join genre join album join music on artist.id=album.id_artist and genre.id=artist.id_genre and artist.id=music.id_artist and music.id_artist=album.id_artist and music.id_album=album.id where artist.name=? or nome_album= ? or name_music=? or genre.gen_name = ?";
   $stmt=$dbh->prepare($query);
   $stmt->execute(array($search,$search,$search,$search));
-  return $stmt->fetch();
+  return $stmt->fetchAll();
 }
 
 function get_album_image($search){
@@ -37,13 +37,13 @@ function searchForMusic($search){
   return $stmt->fetchAll();
   }
 
-  function searchForAlbums_by_artist_id($search){
-    global $dbh;
-    $query = "SELECT distinct nome_album from artist join album join music on artist.id=album.id_artist and artist.id=music.id_artist and music.id_artist=album.id_artist and music.id_album=album.id where artist.id= ?";
-    $stmt=$dbh->prepare($query);
-    $stmt->execute(array($search,$search));
-    return $stmt->fetchAll();
-    }
+function searchForAlbums_by_artist_id($search){
+  global $dbh;
+  $query = "SELECT distinct nome_album from artist join album join music on artist.id=album.id_artist and artist.id=music.id_artist and music.id_artist=album.id_artist and music.id_album=album.id where artist.id= ?";
+  $stmt=$dbh->prepare($query);
+  $stmt->execute(array($search));
+  return $stmt->fetchAll();
+}
 
 function searchForGenre($search){
   global $dbh;
@@ -54,3 +54,10 @@ function searchForGenre($search){
 }
 
 
+function get_id_by_name($search){
+  global $dbh;
+  $query = "SELECT distinct artist.id from artist join album join music on artist.id=album.id_artist and artist.id=music.id_artist and music.id_artist=album.id_artist and music.id_album=album.id where artist.name=? or nome_album=? or name_music=?" ;
+  $stmt=$dbh->prepare($query);
+  $stmt->execute(array($search,$search,$search));
+  return $stmt->fetch();
+}
