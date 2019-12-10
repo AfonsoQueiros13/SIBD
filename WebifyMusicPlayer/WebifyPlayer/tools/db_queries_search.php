@@ -7,7 +7,7 @@ error_reporting(E_ALL);
 
 function searchForArtist($search){
   global $dbh;
-  $query = "SELECT autor FROM music where name_music = ? OR autor = ? OR name_album = ?";
+  $query = "SELECT distinct * FROM album join music on album.artist=music.autor and album.id=music.id_album where music.name_music= ? OR album.artist = ? OR album.nome_album = ? ";
   $stmt=$dbh->prepare($query);
   $stmt->execute(array($search,$search,$search));
   return $stmt->fetchAll();
@@ -15,7 +15,7 @@ function searchForArtist($search){
 
 function searchForAlbum($search){
   global $dbh;
-  $query = "SELECT id_album FROM album join music where autor = ? OR nome_album = ? OR name_music = ?" ;
+  $query = "SELECT distinct artist FROM album join music on album.artist=music.autor and album.id=music.id_album where music.name_music= ? OR album.artist = ? OR album.nome_album = ? " ;
   $stmt=$dbh->prepare($query);
   $stmt->execute(array($search,$search,$search));
   return $stmt->fetchAll();
@@ -23,7 +23,7 @@ function searchForAlbum($search){
 
 function searchForMusic($search){
   global $dbh;
-  $query = "SELECT name_music FROM music where name_music = ?";
+  $query = "SELECT distinct artist FROM album join music on album.artist=music.autor and album.id=music.id_album where music.name_music= ? OR album.artist = ? OR album.nome_album = ? ";
   $stmt=$dbh->prepare($query);
   $stmt->execute(array($search));
   return $stmt->fetchAll();

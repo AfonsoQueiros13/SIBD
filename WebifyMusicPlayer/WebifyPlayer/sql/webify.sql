@@ -21,17 +21,23 @@ CREATE TABLE music (
   id_album integer REFERENCES album,
   name_music varchar,
   name_album varchar,
-  autor varchar,
+  id_artist integer references artist,
   duration integer
+);
+
+--artist table--
+CREATE TABLE artist(
+id integer PRIMARY KEY,
+name varchar
 );
 
 --album table--
 CREATE TABLE album(
   id integer PRIMARY KEY,
   nome_album varchar,
-  artist varchar,
   number_songs integer,
-  img_path varchar
+  img_path varchar,
+  id_artist integer references artist
 );
 
 --playlist table--
@@ -91,6 +97,13 @@ insert into normal_user values (1, 'webify-admin@gmail.com','admin', 'admin');
 
 insert into profile values(1, 'admin', 'link', 1);
 
+insert into artist values(1,'Tyler, The Creator');
+insert into artist values(2,'Drake');
+insert into artist values(3,'Nas');
+insert into artist values(4,'Da Steez Brothaz');
+insert into artist values(5,'AZ');
+insert into artist values(6,'Damian Marley');
+
 insert into album values(1,'IGOR','Tyler, The Creator',12,'../../images/artists/tyler/igor/igor.jpeg');
 insert into album values(2,'Scorpion','Drake',6,'../../images/artists/drake/scorpion/scorpion.jpg');
 insert into album values(3,'Flower Boy','Tyler, The Creator', 14, '../../images/artists/tyler/flowerboy/flowerboy.jpg');
@@ -101,85 +114,85 @@ insert into album values(7,'Distant Relatives','Damian Marley',6, '../../images/
 
 
 /*IGOR;TYLER*/
-insert into music values(1,1,'IGORS THEME','IGOR' ,'Tyler, The Creator',201);
-insert into music values(2,1,'EARFQUAKE','IGOR','Tyler, The Creator',201);
-insert into music values(3,1,'I THINK','IGOR','Tyler, The Creator',201);
-insert into music values(4,1,'Exactly What You Run From You End Up Chasing','IGOR','Tyler, The Creator',201);
-insert into music values(5,1,'RUNNING OUT OF TIME','IGOR','Tyler, The Creator',201);
-insert into music values(6,1,'NEW MAGIC WAND','IGOR','Tyler, The Creator',201);
-insert into music values(7,1,'A BOY IS A GUN','IGOR','Tyler, The Creator',201);
-insert into music values(8,1,'Puppet','IGOR','Tyler, The Creator',201);
-insert into music values(9,1,'WHATS GOOD','IGOR','Tyler, The Creator',201);
-insert into music values(10,1,'GONE, GONE/ THANK YOU','IGOR','Tyler, The Creator',201);
-insert into music values(11,1,'I DONT LOVE YOU ANYMORE','IGOR','Tyler, The Creator',201);
-insert into music values(12,1,'ARE WE STILL FRIENDS','IGOR','Tyler, The Creator',201);
+insert into music values(1,1,'IGORS THEME','IGOR' ,1,201);
+insert into music values(2,1,'EARFQUAKE','IGOR',1,201);
+insert into music values(3,1,'I THINK','IGOR',1,201);
+insert into music values(4,1,'Exactly What You Run From You End Up Chasing','IGOR',1,201);
+insert into music values(5,1,'RUNNING OUT OF TIME','IGOR',1,201);
+insert into music values(6,1,'NEW MAGIC WAND','IGOR',1,201);
+insert into music values(7,1,'A BOY IS A GUN','IGOR',1,201);
+insert into music values(8,1,'Puppet','IGOR',1,201);
+insert into music values(9,1,'WHATS GOOD','IGOR',1,201);
+insert into music values(10,1,'GONE, GONE/ THANK YOU','IGOR',1,201);
+insert into music values(11,1,'I DONT LOVE YOU ANYMORE','IGOR',1,201);
+insert into music values(12,1,'ARE WE STILL FRIENDS','IGOR',1,201);
 
 
 /*SCORPION;DRAKE*/
-insert into music values(13,2,'Jaded','Scorpion','Drake',201);
-insert into music values(14,2,'Finesse','Scorpion','Drake',201);
-insert into music values(15,2,'Peak','Scorpion','Drake',201);
-insert into music values(16,2,'Mob Ties','Scorpion','Drake',201);
-insert into music values(31,2,'Survival','Scorpion','Drake',201);
-insert into music values(32,2,'Nonstop','Scorpion','Drake',201);
+insert into music values(13,2,'Jaded','Scorpion',2,201);
+insert into music values(14,2,'Finesse','Scorpion',2,201);
+insert into music values(15,2,'Peak','Scorpion',2,201);
+insert into music values(16,2,'Mob Ties','Scorpion',2,201);
+insert into music values(31,2,'Survival','Scorpion',2,201);
+insert into music values(32,2,'Nonstop','Scorpion',2,201);
 
 
 /*FLOWER BOY;TYLER*/
-insert into music values(17,3,'Foreword','Flower Boy','Tyler, The Creator',201);
-insert into music values(18,3,'Where This Flower Blooms','Flower Boy','Tyler, The Creator',201);
-insert into music values(19,3,'Sometimes...','Flower Boy','Tyler, The Creator',201);
-insert into music values(20,3,'See You Again','Flower Boy','Tyler, The Creator',201);
-insert into music values(21,3,'Who Dat Boy','Flower Boy','Tyler, The Creator',201);
-insert into music values(22,3,'Pothole','Flower Boy','Tyler, The Creator',201);
-insert into music values(23,3,'Garden Shed','Flower Boy','Tyler, The Creator',201);
-insert into music values(24,3,'Boredom','Flower Boy','Tyler, The Creator',201);
-insert into music values(25,3,'I Aint Got Time','Flower Boy','Tyler, The Creator',201);
-insert into music values(26,3,'911/Mr Lonely','Flower Boy','Tyler, The Creator',201);
-insert into music values(27,3,'Droppin Seeds','Flower Boy','Tyler, The Creator',201);
-insert into music values(28,3,'November','Flower Boy','Tyler, The Creator',201);
-insert into music values(29,3,'Glitter','Flower Boy','Tyler, The Creator',201);
-insert into music values(30,3,'Enjoy Right Now, Today','Flower Boy','Tyler, The Creator',201);
+insert into music values(17,3,'Foreword','Flower Boy',1,201);
+insert into music values(18,3,'Where This Flower Blooms','Flower Boy',1,201);
+insert into music values(19,3,'Sometimes...','Flower Boy',1,201);
+insert into music values(20,3,'See You Again','Flower Boy',1,201);
+insert into music values(21,3,'Who Dat Boy','Flower Boy',1,201);
+insert into music values(22,3,'Pothole','Flower Boy',1,201);
+insert into music values(23,3,'Garden Shed','Flower Boy',1,201);
+insert into music values(24,3,'Boredom','Flower Boy',1,201);
+insert into music values(25,3,'I Aint Got Time','Flower Boy',1,201);
+insert into music values(26,3,'911/Mr Lonely','Flower Boy',1,201);
+insert into music values(27,3,'Droppin Seeds','Flower Boy',1,201);
+insert into music values(28,3,'November','Flower Boy',1,201);
+insert into music values(29,3,'Glitter','Flower Boy',1,201);
+insert into music values(30,3,'Enjoy Right Now, Today','Flower Boy',1,201);
 
 /*ILLMATIC;NAS*/
 
-insert into music values(33,4,'The Genesis','Illmatic','Nas',201);
-insert into music values(34,4,'N.Y. State of Mind','Illmatic','Nas',201);
-insert into music values(35,4,'Life`s a Bitch','Illmatic','Nas',201);
-insert into music values(36,4,'The World is Yours','Illmatic','Nas',201);
-insert into music values(37,4,'Halftime','Illmatic','Nas',201);
-insert into music values(38,4,'One Love','Illmatic','Nas',201);
+insert into music values(33,4,'The Genesis','Illmatic',3,201);
+insert into music values(34,4,'N.Y. State of Mind','Illmatic',3,201);
+insert into music values(35,4,'Life`s a Bitch','Illmatic',3,201);
+insert into music values(36,4,'The World is Yours','Illmatic',3,201);
+insert into music values(37,4,'Halftime','Illmatic',3,201);
+insert into music values(38,4,'One Love','Illmatic',3,201);
 
 
 /*PHYSICAL RAPPIN;DA STEEZ BROTHAZ*/
 
-insert into music values(39,5,'Todo Sigue Igual','Physical Rappin','Da Steez Brothaz',201);
-insert into music values(40,5,'Posible es Ahora','Physical Rappin','Da Steez Brothaz',201);
-insert into music values(41,5,'Dominando el Mic','Physical Rappin','Da Steez Brothaz',201);
-insert into music values(42,5,'90`s Back','Physical Rappin','Da Steez Brothaz',201);
-insert into music values(43,5,'Ready 2 Funk','Physical Rappin','Da Steez Brothaz',201);
-insert into music values(44,5,'Mi Barrio','Physical Rappin','Da Steez Brothaz',201);
-insert into music values(45,5,'Dias Grises','Physical Rappin','Da Steez Brothaz',201);
+insert into music values(39,5,'Todo Sigue Igual','Physical Rappin',4,201);
+insert into music values(40,5,'Posible es Ahora','Physical Rappin',4,201);
+insert into music values(41,5,'Dominando el Mic','Physical Rappin',4,201);
+insert into music values(42,5,'90`s Back','Physical Rappin',4,201);
+insert into music values(43,5,'Ready 2 Funk','Physical Rappin',4,201);
+insert into music values(44,5,'Mi Barrio','Physical Rappin',4,201);
+insert into music values(45,5,'Dias Grises','Physical Rappin',4,201);
 
 
 /*DOE OR DIE;AZ*/
 
-insert into music values(46,6,'Uncut Raw','Doe or Die','AZ',201);
-insert into music values(47,6,'Gimme Your`s','Doe or Die','AZ',201);
-insert into music values(48,6,'Ho Happy Jackie','Doe or Die','AZ',201);
-insert into music values(49,6,'Rather Unique','Doe or Die','AZ',201);
-insert into music values(50,6,'I Feel for You','Doe or Die','AZ',201);
-insert into music values(51,6,'Doe or Die','Doe or Die','AZ',201);
+insert into music values(46,6,'Uncut Raw','Doe or Die',5,201);
+insert into music values(47,6,'Gimme Your`s','Doe or Die',5,201);
+insert into music values(48,6,'Ho Happy Jackie','Doe or Die',5,201);
+insert into music values(49,6,'Rather Unique','Doe or Die',5,201);
+insert into music values(50,6,'I Feel for You','Doe or Die',5,201);
+insert into music values(51,6,'Doe or Die','Doe or Die',5,201);
 
 
 
 /*DISTANT RELATIVES;DAMIAN MARLEY*/
 
-insert into music values(52,7,'As We Enter','Distant Relatives','Damian Marley',201);
-insert into music values(53,7,'Tribes at War','Distant Relatives','Damian Marley',201);
-insert into music values(54,7,'Strong Will Continue','Distant Relatives','Damian Marley',201);
-insert into music values(55,7,'Afrika must Wake Up','Distant Relatives','Damian Marley',201);
-insert into music values(56,7,'Patience','Distant Relatives','Damian Marley',201);
-insert into music values(57,7,'Leaders','Distant Relatives','Damian Marley',201);
+insert into music values(52,7,'As We Enter','Distant Relatives',6,201);
+insert into music values(53,7,'Tribes at War','Distant Relatives',6,201);
+insert into music values(54,7,'Strong Will Continue','Distant Relatives',6,201);
+insert into music values(55,7,'Afrika must Wake Up','Distant Relatives',6,201);
+insert into music values(56,7,'Patience','Distant Relatives',6,201);
+insert into music values(57,7,'Leaders','Distant Relatives',6,201);
 
 
 
