@@ -46,13 +46,13 @@
 
         $ID=$_GET['id'];
         $albums=searchForAlbums_by_artist_id($ID);
-        $info=get_album_and_artist_info($ID);
+        $info=get_artist_name_by_id($ID);
 
 
          ?>
 
         <div id="artist">
-          <h2> <?= $info['name']?> </h2>
+          <h2> <?=$info['name'] ?> </h2>
         </div>
 
           <ul>

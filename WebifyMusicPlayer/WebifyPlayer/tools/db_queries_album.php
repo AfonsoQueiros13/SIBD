@@ -33,4 +33,11 @@ function get_album_and_artist_info($id){
   return $stmt->fetch();
 }
 
+function get_artist_name_by_id($id){
+  global $dbh;
+  $stmt=$dbh->prepare('SELECT distinct name from album join artist where album.id_artist=artist.id and artist.id= ?');
+  $stmt->execute(array($id));
+  return $stmt->fetch();
+}
+
  ?>

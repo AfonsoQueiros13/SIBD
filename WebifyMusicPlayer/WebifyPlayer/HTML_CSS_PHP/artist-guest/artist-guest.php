@@ -54,7 +54,7 @@
       $info = get_album_and_artist_info($ID);
       ?>
       <img src="<?= $album['img_path'] ?>" alt="artist_img">
-      <div> <a href="../selected_artist-guestmode/selected_artist.php?id=<?= $info['id_artist'] ?>"> <?= $info['name'] ?> </a> </div>
+      <div> <a href="../selected_artist-guestmode/selected_artist.php?id=<?= $album['id_artist'] ?>"> <?= $info['name'] ?> </a> </div>
     </div>
 
     <ul>
