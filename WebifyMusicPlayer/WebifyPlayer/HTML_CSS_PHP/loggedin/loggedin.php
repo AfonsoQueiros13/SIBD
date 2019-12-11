@@ -21,7 +21,7 @@
       <h1>Webify</h1>
       <div id="signup">
         <?php $nickname = $_GET['nickname'];
-         echo($nickname);?> 
+         echo($nickname );?> 
       </div>
 
   </header>
