@@ -14,15 +14,15 @@
 
 
 <body>
-                  <!-- TOP BAR -->
+  <!-- TOP BAR -->
   <header>
 
-      <img src="../../images/logo.png" alt="logo">
-      <h1>Webify</h1>
-      <div id="signup">
-        <?php $id = $_GET['nickname'];
-         echo($id);?> 
-      </div>
+    <img src="../../images/logo.png" alt="logo">
+    <h1>Webify</h1>
+    <div id="signup">
+      <?php $id = $_GET['nickname'];
+      echo ($id); ?>
+    </div>
 
   </header>
   <!-- page content -->
@@ -47,7 +47,7 @@
       require_once('../../tools/db_queries_album.php');
 
       $ID = $_GET['id_album'];
-
+      $nickname= $_GET['nick_name'];
       $album = get_album_by_id($ID);
       $songs = get_songs_in_album($album['nome_album'], $ID);
       $info = get_album_and_artist_info($ID);
@@ -63,6 +63,10 @@
         <audio controls>
           <source src="../../music/drake/scorpion/Jaded.mp3" type="audio/ogg">
         </audio>
+        <form action="album-log.php=id_album=<?= $ID ?>" class="inline">
+          <button class="float-left submit-button">Home</button>
+        </form>
+
       <?php } ?>
 
     </ul>
