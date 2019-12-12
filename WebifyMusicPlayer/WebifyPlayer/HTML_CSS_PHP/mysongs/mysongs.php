@@ -71,8 +71,9 @@
 
         <li>
             <div>
-              <?$music_id = selectMusicIDbyName($music); ?>
-              <form action="../php_actions/action_removemysongs.php?id_user=<?=$id?>&id_music=<?=$music_id['id']?>" id="form" method="post">          
+              <?$musicsids[0] = selectMusicIDbyName($music); ?>
+              <a><?= $musicID = $musicsids[$count]['id']; echo $musicID?>
+              <form action="../php_actions/action_removemysongs.php?id_user=<?=$id?>&id_music=<?=$music_id?>" id="form2" method="post">          
               <input type="submit" value="Remove from My Songs">
             </form>
             </div>

@@ -71,7 +71,7 @@
           <a href="../artist-guest/artist-guest.php?id=?>">
 
             <div>
-              <?= $album ?>
+              <?= $music ?>
             </div>
           </a>
         </li>
