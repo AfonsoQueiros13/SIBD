@@ -20,13 +20,8 @@
       <img src="../../images/logo.png" alt="logo">
       <h1>Webify</h1>
       <div id="signup">
-<<<<<<< HEAD
         <?php $id = $_GET['nickname'];
          echo($id);?> 
-=======
-        <?php $nickname = $_GET['nickname'];
-         echo($nickname );?> 
->>>>>>> d47b7f7a36256126ff8989d10526d30ec5a91007
       </div>
 
   </header>
