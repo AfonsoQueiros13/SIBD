@@ -20,8 +20,8 @@
       <img src="../../images/logo.png" alt="logo">
       <h1>Webify</h1>
       <div id="signup">
-        <?php $id = $_GET['nickname'];
-         echo($id);?> 
+        <?php $nickname = $_GET['nickname'];
+         echo($nickname);?> 
       </div>
 
   </header>
@@ -66,7 +66,7 @@
 
                     <li>
                       <?$id = $_GET['nickname'];?>
-                        <a href="../artist-log/artist-log.php?id=<?= $album['id']  ?>&nickname=<?=$id?>">
+                        <a href="../album-log/album-log.php?id_album=<?= $album['id']  ?>&nickname=<?=$id?>">
                             <img src="<?= $album['img_path'] ?>" alt="artistcover">
                             <div>
                                 <?= $album['nome_album'] ?>

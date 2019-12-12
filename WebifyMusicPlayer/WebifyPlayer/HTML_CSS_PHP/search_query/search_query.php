@@ -63,11 +63,20 @@
 
       $count = 0;
       foreach ($all_artists as $artist) {
+        $id_artist = get_id_by_name($search);
         $artist = $all_artists[$count]['name'];
+<<<<<<< HEAD
         $ID=get_id_by_name($artist);
         ?>
         <li>
           <a href="../selected_artist-guestmode/selected_artist.php?id=<?=$ID['id'] ?>">
+=======
+
+        ?>
+        <li>
+          <a href="../selected_artist-guestmode/selected_artist.php?id=<?= $id_artist['id']?>">
+            <img src="<?= $path[$count]['img_path'] ?>" alt="artistcover">
+>>>>>>> php_developing_version_3
             <div>
               <?= $artist ?>
             </div>
