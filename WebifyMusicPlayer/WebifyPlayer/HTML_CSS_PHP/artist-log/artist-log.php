@@ -20,8 +20,14 @@
     <img src="../../images/logo.png" alt="logo">
     <h1>Webify</h1>
     <div id="signup">
-      <?php $id = $_GET['nickname'];
-      echo ($id); ?>
+      <?php
+      ini_set('display_errors', 1);
+      ini_set('display_startup_errors', 1);
+      require_once('../../config/init.php');
+      require_once('../../tools/db_queries_user.php');
+      $id = $_GET['id_user'];
+      $nickname = selectUserNickfromID($id);
+      echo ($nickname[0]['nick_name']); ?>
     </div>
 
   </header>
