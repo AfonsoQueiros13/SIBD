@@ -33,8 +33,7 @@
         <li><i class="fa fa-home"></i><a href="../loggedin/loggedin.php?id=<?= $id ?>">Home</a></li>
         <li><i class="fa fa-search"></i><a href="../search-log/search-log.php?id=<?= $id ?>">Search</a></li>
         <li><i class="fa fa-music"></i><a href="../mysongs/mysongs.php">My Songs</a></li>
-        <li><i class="fa fa-archive"></i><a href="../playlists/playlists.php?id=<?= $id ?>">Playlists</a></li>
-        <li><i class="fa fa-folder"></i><a href="../myalbums/albums.php?id=<?= $id ?>">MyAlbums</a></li>
+        <li><i class="fa fa-folder"></i><a href="../myalbums/myalbums.php?id=<?= $id ?>">My Albums</a></li>
         <li><i class="fa fa-power-off"></i><a href="../home/home.php">Logout </a></li>
       </ul>
     </div>
@@ -43,7 +42,7 @@
 
 
   <div id="cont">
-    <h2>My Songs</h2>
+    <h2>My Albums</h2>
     <ul>
       <?php
       /*DISPLAY ERRORS*/
@@ -53,29 +52,26 @@
 
       /*REQUIRES TO RUN CORRECTY PHP SCRIPT*/
       require_once('../../config/init.php');
-      require_once('../../tools/db_queries_music.php');
+      require_once('../../tools/db_queries_album.php');
 
 
       #$searchmusic = $_POST['searchquery'];
       $id = $_GET['id'];
-      $allmusics = selectMySongs($id);
+      $allalbums = selectMyAlbums($id);
 
 
       $count = 0;
-      foreach ($allmusics as $music) {
+      foreach ($allalbums as $album) {
 
         //$album = get_album_by_id($all_albums[$count++]['nome_album']);
-        $music = $allmusics[$count]['name_music'];
-        echo $music;
+        $album = $allalbums[$count]['nome_album'];
         ?>
 
         <li>
+          <a href="../artist-guest/artist-guest.php?id=?>">
+
             <div>
-              <?$musicsids[0] = selectMusicIDbyName($music); ?>
-              <a><?= $musicID = $musicsids[$count]['id']; echo $musicID?>
-              <form action="../php_actions/action_removemysongs.php?id_user=<?=$id?>&id_music=<?=$music_id?>" id="form2" method="post">          
-              <input type="submit" value="Remove from My Songs">
-            </form>
+              <?= $music ?>
             </div>
           </a>
         </li>

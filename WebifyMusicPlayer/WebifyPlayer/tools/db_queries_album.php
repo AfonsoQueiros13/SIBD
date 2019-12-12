@@ -40,4 +40,48 @@ function get_artist_name_by_id($id){
   return $stmt->fetch();
 }
 
+
+
+function insertMyAlbum($id_user,$id_album){
+ 
+  global $dbh;
+  $query = "SELECT * FROM liked_albums WHERE id_user = ? and id_album= ? ";
+  $stmt = $dbh->prepare($query);
+  $stmt->execute(array($id_user, $id_album));
+  $count = $stmt->fetchColumn();
+
+  if ($count == 0) { //NO ENTRANCE FOR THIS MUSIC IN DATABASE LIKED_MUSICS
+      $query = 'INSERT INTO liked_albums VALUES(?,?)';
+      $stmt = $dbh->prepare($query);
+      $stmt->execute(array($id_user, $id_album)); //NULL AUTOINCREMENTS ID
+      header('Location: ../artist-log/artist-log.php?id_album=' . $id_album . '&id_user=' . $id_user);
+  } 
+}
+
+function verifyMyAlbums($id_user, $id_album)
+{
+
+    global $dbh;
+    $query = "SELECT * FROM liked_albums WHERE id_user = ? and id_album= ? ";
+    $stmt = $dbh->prepare($query);
+    $stmt->execute(array($id_user, $id_album));
+    $count = $stmt->fetchColumn();
+
+    if ($count == 0)  //NO ENTRANCE FOR THIS MUSIC IN DATABASE LIKED_MUSICS
+        return 0; 
+    else
+        return 1;
+}
+
+function selectMyAlbums($id_user)
+{
+
+    global $dbh;
+    $query = "SELECT album.nome_album FROM album, liked_albums WHERE album.id = liked_albums.id_album AND liked_albums.id_user = ?";
+    $stmt = $dbh->prepare($query);
+    $stmt->execute(array($id_user));
+    $count = $stmt->fetchColumn();
+    return $stmt->fetchAll();
+}
+
  ?>

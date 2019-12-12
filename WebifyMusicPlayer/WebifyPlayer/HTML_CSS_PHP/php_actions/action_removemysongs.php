@@ -10,9 +10,8 @@
 
   $id_user= $_GET['id_user'];
   $id_music = $_GET['id_music'];
-  $id_album = $_GET['id_album'];
   try {
-    insertMySong($id_user,$id_music,$id_album); //RETURNS FOR $user_data db information for this user
+    deleteMySongs($id_user,$id_music); //RETURNS FOR $user_data db information for this user
 
       } 
       catch(Exception $e) {
