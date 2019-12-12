@@ -47,7 +47,7 @@
       require_once('../../tools/db_queries_album.php');
 
       $ID = $_GET['id_album'];
-      $nickname= $_GET['nick_name'];
+      $nickname= $_GET['nickname'];
       $album = get_album_by_id($ID);
       $songs = get_songs_in_album($album['nome_album'], $ID);
       $info = get_album_and_artist_info($ID);
@@ -63,7 +63,7 @@
         <audio controls>
           <source src="../../music/drake/scorpion/Jaded.mp3" type="audio/ogg">
         </audio>
-        <form action="album-log.php=id_album=<?= $ID ?>" class="inline">
+        <form action="../album-log.php?id<?= $ID ?>&nickname=<?= $nickname ?> " class="inline">
           <button class="float-left submit-button">Home</button>
         </form>
 
