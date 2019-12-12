@@ -66,13 +66,15 @@
 
         //$album = get_album_by_id($all_albums[$count++]['nome_album']);
         $music = $allmusics[$count]['name_music'];
+        echo $music;
         ?>
 
         <li>
-          <a href="../artist-guest/artist-guest.php?id=<?= $music['id'] ?>">
-
             <div>
-              <?= $music ?>
+              <?$music_id = selectMusicIDbyName($music); ?>
+              <form action="../php_actions/action_removemysongs.php?id_user=<?=$id?>&id_music=<?=$music_id['id']?>" id="form" method="post">          
+              <input type="submit" value="Remove from My Songs">
+            </form>
             </div>
           </a>
         </li>

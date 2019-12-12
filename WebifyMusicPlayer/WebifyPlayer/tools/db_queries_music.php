@@ -50,3 +50,26 @@ function selectMySongs($id_user)
     $count = $stmt->fetchColumn();
     return $stmt->fetchAll();
 }
+
+
+function deleteMySongs($id_music, $id_user)
+{
+
+    global $dbh;
+    $query = "DELETE * FROM  liked_musics WHERE liked_musics.id_music = ? AND liked_musics.id_user = ?";
+    $stmt = $dbh->prepare($query);
+    $stmt->execute(array($id_music,$id_user));
+    $count = $stmt->fetchColumn();
+    return $stmt->fetchAll();
+}
+
+function selectMusicIDbyName($nome_musica)
+{
+
+    global $dbh;
+    $query = "SELECT id FROM  music WHERE name_music = ?";
+    $stmt = $dbh->prepare($query);
+    $stmt->execute(array($nome_musica));
+    $count = $stmt->fetchColumn();
+    return $stmt->fetchAll();
+}
