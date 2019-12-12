@@ -56,7 +56,7 @@ function searchForGenre($search){
 
 function get_id_by_name($search){
   global $dbh;
-  $query = "SELECT distinct artist.id from artist join album join music on artist.id=album.id_artist and artist.id=music.id_artist and music.id_artist=album.id_artist and music.id_album=album.id where artist.name=? or nome_album=? or name_music=? " ;
+  $query = "SELECT distinct artist.id from artist join album join music on artist.id=album.id_artist and artist.id=music.id_artist and music.id_artist=album.id_artist and music.id_album=album.id where artist.name=? or nome_album=? or name_music=?" ;
   $stmt=$dbh->prepare($query);
   $stmt->execute(array($search,$search,$search));
   return $stmt->fetch();
