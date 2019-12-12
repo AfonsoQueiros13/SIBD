@@ -40,8 +40,9 @@
         <li><i class="fa fa-home"></i><a href="../loggedin/loggedin.php?id=<?=$_GET['id_user']?>">Home</a></li>
         <li><i class="fa fa-search"></i><a href="../search-log/search-log.php?id=<?=$_GET['id_user']?>">Search</a></li>
         <li><i class="fa fa-music"></i><a href="../mysongs/mysongs.php?id=<?=$_GET['id_user']?>"> My Songs</a></li>
-        <li><i class="fa fa-archive"></i><a href="../playlists/playlists.php?id=<?=$_GET['id_user ']?>">Playlists</a></li>
-        <li><i class="fa fa-power-off"></i><a href="../home/home.php">Logout </a></li>
+        <li><i class="fa fa-archive"></i><a href="../playlists/playlists.php?id=<?=$_GET['id_user']?>">Playlists</a></li>
+        <li><i class="fa fa-folder"></i><a href="../myalbums/myalbums.php?id=<?=$_GET['id_user']?>">My Albums</a></li>
+        <li><i class="fa fa-power-off"></i><a href="../home/home.php">Logout</a></li>
       </ul>
     </div>
   </div>
@@ -65,6 +66,25 @@
       $info = get_album_and_artist_info($id_album);
       ?>
       <img src="<?= $album['img_path'] ?>" alt="artist_img">
+      <?php
+          ini_set('display_errors', 1);
+          ini_set('display_startup_errors', 1);
+          require_once('../../config/init.php');
+          require_once('../../tools/db_queries_album.php');
+          $id_user = $_GET['id_user'];
+          $id_album = $_GET ['id_album'];
+          $result = verifyMyAlbums($id_user, $id_album);
+          if ($result == 0)
+          {
+          ?><form action="../php_actions/action_myalbums.php?id_album=<?=$id_album?>&id_user=<?=$id_user?>" id="form" method="post">
+          <input type="submit" value="Add to MyAlbums">
+          </form>
+          <? } ?>
+          <?
+          $result = verifyMyAlbums($id_user, $id_album);;
+          if ($result == 1){
+          ?> <a> Album added in MyAlbums </a>
+          <? } ?>
       <div> <?= $info['name'] ?> </div>
     </div>
 

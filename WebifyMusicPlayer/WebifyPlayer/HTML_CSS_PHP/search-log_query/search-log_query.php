@@ -40,6 +40,7 @@
           <li><i class="fa fa-search"></i><a href="../search-log/search-log.php?id=<?=$_GET['id']?>">Search</a></li>
           <li><i class="fa fa-music"></i><a href="../mysongs/mysongs.php?id=<?=$_GET['id']?>">My Songs</a></li>
           <li><i class="fa fa-archive"></i><a href="../playlists/playlists.php?id=<?=$_GET['id']?>">Playlists</a></li>
+          <li><i class="fa fa-folder"></i><a href="../playlists/playlists.php?id=<?=$_GET['id']?>">My Albums</a></li>
           <li><i class="fa fa-power-off"></i><a href="../home/home.php?id=<?=$_GET['id']?>">Logout </a></li>
         </ul>
       </div>
