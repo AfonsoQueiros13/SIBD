@@ -60,14 +60,14 @@
 
       $search = $_POST['searchquery'];
       $all_artists = searchForArtist($search);
-      
+
       $count = 0;
       foreach ($all_artists as $artist) {
         $artist = $all_artists[$count]['name'];
+        $ID=get_id_by_name($artist);
         ?>
         <li>
-          <a href="../artist-guest/artist-guest.php?id=<?= $artist['name'] ?>">
-            <img src="<?= $path[$count]['img_path'] ?>" alt="artistcover">
+          <a href="../selected_artist-guestmode/selected_artist.php?id=<?=$ID['id'] ?>">
             <div>
               <?= $artist ?>
             </div>
@@ -80,7 +80,7 @@
       }
       ?>
     </div>
-     
+
 
     <h3>Albums</h3>
     <div id="albums">
