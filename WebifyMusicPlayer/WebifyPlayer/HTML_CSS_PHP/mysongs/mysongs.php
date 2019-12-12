@@ -36,8 +36,44 @@
     <div id="cont">
       <h2>My Songs</h2>
       <ul>
-        <li>Song 1</li>
-        <li>Song 2</li>
+      <?php
+      /*DISPLAY ERRORS*/
+      ini_set('display_errors', 1);
+      ini_set('display_startup_errors', 1);
+      error_reporting(E_ALL);
+
+      /*REQUIRES TO RUN CORRECTY PHP SCRIPT*/
+      require_once('../../config/init.php');
+      require_once('../../tools/db_queries_music.php');
+      
+
+      #$searchmusic = $_POST['searchquery'];
+      $id= $_GET['id'];
+      $allmusics = selectMySongs($id);
+
+
+      $count = 0;
+      foreach ($allmusics as $music) {
+
+        //$album = get_album_by_id($all_albums[$count++]['nome_album']);
+        $music = $allmusics[$count]['name_music'];
+        ?>
+
+        <li>
+          <a href="../artist-guest/artist-guest.php?id=<?= $music['id'] ?>">
+
+            <div>
+              <?= $music ?>
+            </div>
+          </a>
+        </li>
+
+
+      <?php
+        $count++;
+      }
+      ?>
+
         </ul>
     </div>
 
