@@ -101,15 +101,16 @@
 
 
       $count = 0;
+      $count2=0;
       foreach ($all_albums as $album) {
         $path = get_album_image($album['nome_album']);
         //$album = get_album_by_id($all_albums[$count++]['nome_album']);
-        $album = $all_albums[$count]['nome_album'];
+        $album = $all_albums[$count++]['nome_album'];
         ?>
 
         <li>
           <a href="../artist-guest/artist-guest.php?id=<?= $album['id'] ?>">
-            <img src="<?=$path[$count]['img_path']?>" alt="artistcover">
+            <img src="<?=$path[$count2]['img_path']?>" alt="artistcover">
             <div>
               <?= $album ?>
             </div>
