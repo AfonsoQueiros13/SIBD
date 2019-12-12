@@ -9,8 +9,8 @@ function insertUser($email, $nick, $password)
   $stmt->execute(array($email,$nick));
   $count=$stmt->fetchColumn();
 
-  
-  
+
+
   if ($count == 0) { //NO ENTRANCE FOR THIS E-MAIL IN DATABASE
       $query = 'INSERT INTO normal_user VALUES(?,?,?,?)';
       $stmt = $dbh->prepare($query);
@@ -18,7 +18,7 @@ function insertUser($email, $nick, $password)
       header('Location: ../home/home.php');
   }
   else //ERROR INSERTING IN DB -> ALREADY EXISTS THIS E-MAIL
-  { 
+  {
     //echo ("<script>alert('E-mail already exists!.');</script>");
     echo ("<script>alert('E-mail or Username already exists!');setTimeout(\"location.href = '../register/register.php';\",100);</script>");
     //header('Location: ../HTML_CSS/register/register.php');
@@ -54,4 +54,16 @@ function selectUserNickfromID($id)
   $stmt->execute(array($id));
   return $stmt->fetchAll(); // DESIRED VALUES RETURNED FROM DB
 }
+
+function insertphoto($id){
+  global $dbh;
+  $query = " nick_name FROM normal_user WHERE id = ?";
+  $stmt= $dbh->prepare($query);
+  $stmt->execute(array($id));
+}
+
+function changeuserphoto($id){
+
+}
+
 ?>

@@ -23,6 +23,7 @@
       <?php
       ini_set('display_errors', 1);
       ini_set('display_startup_errors', 1);
+      error_reporting(E_ALL);
       require_once('../../config/init.php');
       require_once('../../tools/db_queries_user.php');
       $id = $_GET['id_user'];
@@ -53,6 +54,7 @@
       <?php
       ini_set('display_errors', 1);
       ini_set('display_startup_errors', 1);
+      error_reporting(E_ALL);
       require_once('../../config/init.php');
       require_once('../../tools/db_queries_album.php');
       require_once('../../tools/db_queries_user.php');
@@ -79,10 +81,11 @@
         <?php
           ini_set('display_errors', 1);
           ini_set('display_startup_errors', 1);
+          error_reporting(E_ALL);
           require_once('../../config/init.php');
           require_once('../../tools/db_queries_music.php');
           $id_user = $_GET['id_user'];
-          $id_album = $_GET ['id_album'];
+          $id_album = $_GET['id_album'];
           $id_music = $song_name['id'];
           $result = verifyMySongs($id_user, $id_music);
           if ($result == 0)

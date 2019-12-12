@@ -57,11 +57,13 @@
 
           <ul>
             <?php
+            $count=0;
             foreach ($albums as $album_single) {
               $result=$album_single['nome_album'];
+              $img=get_album_image($result);
             ?>
             <h3>Album</h3>
-                <img src="<?=get_album_image($result)?>" alt="cover photo">
+                <img src="<?=$img[$count]['img_path']?>" alt="cover photo">
                 <li> <?=$album_single['nome_album'] ?> </li>
           </ul>
 
