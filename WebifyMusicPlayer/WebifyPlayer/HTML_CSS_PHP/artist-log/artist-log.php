@@ -95,8 +95,8 @@
           $result = verifyMySongs($id_user, $id_music);
           if ($result == 1){
           ?> <a> Music added in MySongs </a>
-          <?php } ?>
-    
+          <? } ?>
+        <? } ?>
 
     </ul>
 
