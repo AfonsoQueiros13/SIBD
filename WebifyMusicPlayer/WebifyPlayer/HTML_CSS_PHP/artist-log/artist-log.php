@@ -70,7 +70,7 @@
 
     <ul>
 
-      <?php foreach ($songs as $song_name) { ?>
+      <? foreach ($songs as $song_name) { ?>
         <li> <?= $song_name['name_music'] ?> </li>
 
         <audio controls>
@@ -90,7 +90,7 @@
           ?><form action="../php_actions/action_mysongs.php?id_album=<?=$id_album?>&id_user=<?=$id_user?>&id_music=<?=$song_name['id']?>" id="form" method="post">
           <input type="submit" value="Add to MySongs">
           </form>
-          <?php } ?>
+          <? } ?>
           <?
           $result = verifyMySongs($id_user, $id_music);
           if ($result == 1){
