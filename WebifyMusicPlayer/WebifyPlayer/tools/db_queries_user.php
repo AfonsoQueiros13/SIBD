@@ -36,12 +36,22 @@ function selectUser($email,$password)
   return $stmt->fetchAll(); // DESIRED VALUES RETURNED FROM DB
 }
 
-function selectUserNick($email)
+function selectUserID($email)
 {
   global $dbh;
-  $query = "SELECT nick_name FROM normal_user WHERE email = ?";
+  $query = "SELECT id FROM normal_user WHERE email = ?";
   $stmt= $dbh->prepare($query);
   $stmt->execute(array($email));
+  return $stmt->fetchAll(); // DESIRED VALUES RETURNED FROM DB
+}
+
+
+function selectUserNickfromID($id)
+{
+  global $dbh;
+  $query = "SELECT nick_name FROM normal_user WHERE id = ?";
+  $stmt= $dbh->prepare($query);
+  $stmt->execute(array($id));
   return $stmt->fetchAll(); // DESIRED VALUES RETURNED FROM DB
 }
 ?>

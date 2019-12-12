@@ -20,8 +20,14 @@
       <img src="../../images/logo.png" alt="logo">
       <h1>Webify</h1>
       <div id="signup">
-        <?php $id = $_GET['nickname'];
-         echo($id);?> 
+        <?php
+        ini_set('display_errors', 1);
+        ini_set('display_startup_errors', 1);
+        require_once('../../config/init.php');
+        require_once('../../tools/db_queries_user.php');
+        $id = $_GET['id'];
+        $nickname = selectUserNickfromID($id);
+        echo($nickname[0]['nick_name']);?> 
       </div>
 
   </header>
@@ -31,12 +37,10 @@
     <div id="sidebar-clone">
       <div id="iconmenu">
         <ul>
-          <li><i class="fa fa-home"></i><a href="../loggedin/loggedin.php">Home</a></li>
-          <li><i class="fa fa-search"></i><a href="../search-log/search-log.php">Search</a></li>
-          <li><i class="fa fa-music"></i> <?$id = $_GET['nickname'];  
-          echo '<a href="../mysongs/mysongs.php?id='.$id .'"> My Songs</a>'; ?> </li>
-          <li><i class="fa fa-archive"></i><?$id = $_GET['nickname'];  
-          echo '<a href="../playlists/playlists.php?id='.$id .'"> My Playlists</a>'; ?> </li>
+          <li><i class="fa fa-home"></i><a href="../loggedin/loggedin.php?id=<?=$_GET['id']?>">Home</a></li>
+          <li><i class="fa fa-search"></i><a href="../search-log/search-log.php?id=<?=$_GET['id']?>">Search</a></li>
+          <li><i class="fa fa-music"></i><a href="../mysongs/mysongs.php?id=<?=$_GET['id']?>"> My Songs</a>' </li>
+          <li><i class="fa fa-archive"></i><a href="../playlists/playlists.php?id=<?=$_GET['id']?>"> My Playlists</a>'; ?> </li>
           <li><i class="fa fa-power-off"></i><a href="../home/home.php">Logout </a></li>
         </ul>
       </div>
@@ -65,8 +69,8 @@
                     ?>
 
                     <li>
-                      <?$id = $_GET['nickname'];?>
-                        <a href="../artist-log/artist-log.php?id=<?= $album['id']  ?>&nickname=<?=$id?>">
+                      <?$id_user = $_GET['id'];?>
+                        <a href="../artist-log/artist-log.php?id_album=<?= $album['id']  ?>&id_user=<?=$id_user?>">
                             <img src="<?= $album['img_path'] ?>" alt="artistcover">
                             <div>
                                 <?= $album['nome_album'] ?>

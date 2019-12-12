@@ -18,14 +18,14 @@
           Profile Name
         </div>
     </header>
-
+    <? $id = $_GET['id'];?>
     <div id="sidebar-clone">
       <div id="iconmenu">
         <ul>
-          <li><i class="fa fa-home"></i><a href="../loggedin/loggedin.php">Home</a></li>
-          <li><i class="fa fa-search"></i><a href="../search-log/search-log.php">Search</a></li>
+          <li><i class="fa fa-home"></i><a href="../loggedin/loggedin.php?id=<?=$id?>">Home</a></li>
+          <li><i class="fa fa-search"></i><a href="../search-log/search-log.php?id=<?=$id?>">Search</a></li>
           <li><i class="fa fa-music"></i><a href="../mysongs/mysongs.php">My Songs</a></li>
-          <li><i class="fa fa-archive"></i><a href="../playlists/playlists.php">Playlists</a></li>
+          <li><i class="fa fa-archive"></i><a href="../playlists/playlists.php?id=<?=$id?>">Playlists</a></li>
           <li><i class="fa fa-power-off"></i><a href="../home/home.php">Logout </a></li>
         </ul>
       </div>

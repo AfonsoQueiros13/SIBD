@@ -32,11 +32,11 @@
           <li><a href="../playlists/playlists.html">Playlists</a></li>
           <li><a href="../home/home.html">Logout </a></li> -->
 
-          <li><i class="fa fa-home"></i><a href="../loggedin/loggedin.php">Home</a></li>
-          <li><i class="fa fa-search"></i><a href="../search-log/search-log.php">Search</a></li>
-          <li><i class="fa fa-music"></i><a href="../mysongs/mysongs.php">My Songs</a></li>
-          <li><i class="fa fa-archive"></i><a href="../playlists/playlists.php">Playlists</a></li>
-          <li><i class="fa fa-power-off"></i><a href="../home/home.php">Logout </a></li>
+          <li><i class="fa fa-home"></i><a href="../loggedin/loggedin.php?id=<?=$_GET['id']?>">Home</a></li>
+          <li><i class="fa fa-search"></i><a href="../search-log/search-log.php?id=<?=$_GET['id']?>">Search</a></li>
+          <li><i class="fa fa-music"></i><a href="../mysongs/mysongs.php?id=<?=$_GET['id']?>">My Songs</a></li>
+          <li><i class="fa fa-archive"></i><a href="../playlists/playlists.php?id=<?=$_GET['id']?>">Playlists</a></li>
+          <li><i class="fa fa-power-off"></i><a href="../home/home.php?id=<?=$_GET['id']?>">Logout </a></li>
         </ul>
       </div>
     </div>
@@ -46,7 +46,7 @@
     <!-- include textbox for searching songs, artists, playlists(?),.. -->
     <!-- should also include sidebar -->
 
-    <form action="../search_query/search_query.php" method="post">
+    <form action="../search-log_query/search-log_query.php?id=<?=$_GET['id']?>" method="post">
       <input type="text" name="searchquery" placeholder="Type anything . . .">
       <input type="submit" value="Search">
     </form>

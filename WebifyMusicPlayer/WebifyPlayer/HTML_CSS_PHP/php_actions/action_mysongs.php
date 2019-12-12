@@ -8,11 +8,12 @@
   require_once('../../config/init.php');
   require_once('../../tools/db_queries_music.php');
 
-  $id_user= $_GET['id'];
-  $nickname = $_GET['nickname'];
+  $id_user= $_GET['id_user'];
   $id_music = $_GET['id_music'];
+  $id_album = $_GET['id_album'];
   try {
     insertMySong($id_user,$id_music); //RETURNS FOR $user_data db information for this user
+    header('Location: ../artist-log/artist-log.php?id_album='.$id_album.'&id_user='.$id_user);
       } 
       catch(Exception $e) {
         echo 'Exception -> ';

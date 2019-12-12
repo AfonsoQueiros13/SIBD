@@ -18,8 +18,8 @@
     }
     else
     {
-      $nickname = selectUserNick($email,$password);
-      header('Location: ../loggedin/loggedin.php?nickname='.$nickname[0]['nick_name']);
+      $id = selectUserID($email,$password);
+      header('Location: ../loggedin/loggedin.php?id='.$id[0]['id']);
       exit;
     }
      
