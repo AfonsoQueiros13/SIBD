@@ -70,7 +70,7 @@
 
                     <li>
                       <?$id_user = $_GET['id'];?>
-                        <a href="../artist-log/artist-log.php?id_album=<?=$album['id']?>&id_user=<?=$id_user?>">
+                        <a href="../artist-log/artist-log.php?id_album=<?=$album['id']?>&id_user=<?=$_GET['id']?>">
                             <img src="<?= $album['img_path'] ?>" alt="artistcover">
                             <div>
                                 <?= $album['nome_album'] ?>
