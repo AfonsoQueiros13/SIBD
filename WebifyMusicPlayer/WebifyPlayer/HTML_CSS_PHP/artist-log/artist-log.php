@@ -96,7 +96,7 @@
           if ($result == 1){
           ?> <a> Music added in MySongs </a>
           <?php } ?>
-        <?php } ?>
+    
 
     </ul>
 
